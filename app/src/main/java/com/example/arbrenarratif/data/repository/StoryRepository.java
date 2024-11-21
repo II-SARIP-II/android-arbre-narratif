@@ -1,6 +1,7 @@
 package com.example.arbrenarratif.data.repository;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.example.arbrenarratif.data.model.StoryNode;
 import com.example.arbrenarratif.utils.JsonHelper;
@@ -10,28 +11,31 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class StoryRepository {
-    private final HashMap<Integer, StoryNode> storyMap = new HashMap<>();
+    private Map<Integer, StoryNode> storyMap = new HashMap<>();
 
-    // Charger l'arbre narratif depuis le fichier JSON
     public void loadStory(Context context) {
-        // Lire le fichier JSON brut
         String jsonString = JsonHelper.loadJSONFromAssets(context, "story.json");
+        Log.d("StoryRepository", "JSON Loaded: " + jsonString); // Ajoute ce log
 
-        // Parser le JSON en une liste de StoryNode
         Gson gson = new Gson();
         Type storyListType = new TypeToken<List<StoryNode>>() {}.getType();
         List<StoryNode> storyNodes = gson.fromJson(jsonString, storyListType);
 
-        // Stocker les nœuds dans un HashMap pour un accès rapide
+        Log.d("StoryRepository", "Parsed Story Nodes: " + storyNodes); // Et celui-ci
+
         for (StoryNode node : storyNodes) {
             storyMap.put(node.getId(), node);
+            Log.d("StoryRepository", "Node added: " + node.getId()); // Et celui-ci
         }
     }
 
-    // Récupérer un nœud par son ID
     public StoryNode getNodeById(int id) {
-        return storyMap.get(id);
+        StoryNode node = storyMap.get(id);
+        Log.d("StoryRepository", "Get Node by ID " + id + ": " + node); // Et celui-ci
+        return node;
     }
 }
+

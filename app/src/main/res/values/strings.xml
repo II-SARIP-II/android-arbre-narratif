@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">arbreNarratif</string>
-    <string name="make_a_choice">faites un choix</string>
-    <string name="narrative_text">Texte narratif</string>
-    <string name="choice1">choice1</string>
-    <string name="choice2">choice2</string>
+    <string name="end_message">Merci d\'avoir joué !</string>
+    <string name="restart_button">Recommencer l\'histoire</string>
 </resources>
