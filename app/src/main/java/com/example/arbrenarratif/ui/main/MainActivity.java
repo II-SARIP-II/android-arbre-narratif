@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         StoryRepository repository = new StoryRepository();
         viewModel = new ViewModelProvider(this, new ViewModelFactory(repository)).get(StoryViewModel.class);
 
+        // TODO: 21/11/2024  implementer la fonctionnalité de fin & continue issue
+
         viewModel.getCurrentNode().observe(this, storyNode -> {
             if (storyNode != null) {
                 updateStoryNode(storyNode);
