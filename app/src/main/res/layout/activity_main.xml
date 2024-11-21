@@ -1,59 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".ui.main.MainActivity">
-
-    <!-- Texte narratif -->
-    <TextView
-        android:id="@+id/storyTextView"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_margin="16dp"
-        android:background="@color/black"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="@string/narrative_text"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/choicesContainer" />
-
-    <!-- Conteneur pour les choix -->
-
-
-    <!-- Texte pour guider l'utilisateur -->
-    <TextView
-        android:id="@+id/makeAChoice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@color/black"
-        android:gravity="center"
-        android:padding="16dp"
-        android:text="@string/make_a_choice"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/storyTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/choicesContainer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:id="@+id/mainLayout"
         android:orientation="vertical"
-        android:padding="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/makeAChoice"
- />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/storyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Story Text"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:id="@+id/choicesLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Les boutons des choix seront ajoutés ici dynamiquement -->
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

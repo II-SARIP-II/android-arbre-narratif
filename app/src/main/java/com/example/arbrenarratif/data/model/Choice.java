@@ -2,26 +2,35 @@ package com.example.arbrenarratif.data.model;
 
 public class Choice {
     private String text;
-    private int nextNodeId;
+    private int nextNode;
 
-    public Choice(String text, int nextNodeId) {
-        this.text = text;
-        this.nextNodeId = nextNodeId;
+    // Constructeur par défaut requis pour Gson
+    public Choice() {
     }
 
+    // Getters
     public String getText() {
         return text;
     }
 
+    public int getNextNode() {
+        return nextNode;
+    }
+
+    // Setters
     public void setText(String text) {
         this.text = text;
     }
 
-    public int getNextNodeId() {
-        return nextNodeId;
+    public void setNextNode(int nextNode) {
+        this.nextNode = nextNode;
     }
 
-    public void setNextNodeId(int nextNodeId) {
-        this.nextNodeId = nextNodeId;
+    @Override
+    public String toString() {
+        return "Choice{" +
+                "text='" + text + '\'' +
+                ", nextNode=" + nextNode +
+                '}';
     }
 }
