@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">arbreNarratif</string>
+    <string name="end_message">Merci d\'avoir joué !</string>
+    <string name="restart_button">Recommencer l\'histoire</string>
 </resources>

@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    tools:context=".ui.main.MainActivity">
+    android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
+        <TextView
+            android:id="@+id/storyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Story Text"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/choicesLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- Les boutons des choix seront ajoutés ici dynamiquement -->
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
