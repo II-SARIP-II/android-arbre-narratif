@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "text": "Vous êtes dans une forêt sombre. Que faites-vous ?",
+    "choices": [
+      { "text": "Aller à gauche", "nextNode": 2 },
+      { "text": "Aller à droite", "nextNode": 3 }
+    ]
+  },
+  {
+    "id": 2,
+    "text": "Vous trouvez une rivière. Que faites-vous ?",
+    "choices": [
+      { "text": "Traverser la rivière", "nextNode": 4 },
+      { "text": "Retourner dans la forêt", "nextNode": 1 }
+    ]
+  },
+  {
+    "id": 3,
+    "text": "Un ours bloque votre chemin. Que faites-vous ?",
+    "choices": [
+      { "text": "Fuir en courant", "nextNode": 4 },
+      { "text": "Essayer de négocier", "nextNode": 2 }
+    ]
+  },
+  {
+    "id": 4,
+    "text": "Vous trouvez une clairière paisible. Fin de l'histoire.",
+    "choices": []
+  }
+]

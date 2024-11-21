@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StoryNode {
-    private int ID;
+    private int Id;
     private String text;
     private List<Choice> choices;
 
     public StoryNode(int id, String text){
-        this.ID = id;
+        this.Id = id;
         this.text = text;
         this.choices = new ArrayList<>();
     }
 
-    public int getID(){
-        return this.ID;
+    public int getId(){
+        return this.Id;
     }
     public String getText(){
         return this.text;
@@ -24,7 +24,7 @@ public class StoryNode {
         return choices;
     }
     public void setID(int id){
-        this.ID = id;
+        this.Id = id;
     }
     public void setText(String text){
         this.text = text;
@@ -38,7 +38,7 @@ public class StoryNode {
     @Override
     public String toString() {
         return "StoryNode{" +
-                "id=" + this.ID +
+                "id=" + this.Id +
                 ", text='" + this.text + '\'' +
                 ", choices=" + this.choices +
                 '}';
