@@ -2,11 +2,11 @@ package com.example.arbrenarratif.data.model;
 
 public class Choice {
     private String text;
-    private int nextNodeId;
+    private int nextNode;
 
-    public Choice(String text, int nextNodeId) {
+    public Choice(String text, int nextNode) {
         this.text = text;
-        this.nextNodeId = nextNodeId;
+        this.nextNode = nextNode;
     }
 
     public String getText() {
@@ -17,11 +17,11 @@ public class Choice {
         this.text = text;
     }
 
-    public int getNextNodeId() {
-        return nextNodeId;
+    public int getNextNode() {
+        return nextNode;
     }
 
-    public void setNextNodeId(int nextNodeId) {
-        this.nextNodeId = nextNodeId;
+    public void setNextNode(int nextNode) {
+        this.nextNode = nextNode;
     }
 }
