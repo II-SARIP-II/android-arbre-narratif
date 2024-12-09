@@ -34,10 +34,12 @@ public class StoryViewModel extends ViewModel {
     }
 
     public void selectChoice(Choice choice) {
-        // Ajoute ton calcul de score ici si besoin
-        // ecoScore.setValue(ecoScore.getValue() + choice.getScore());
         StoryNode nextNode = repository.getNodeById(choice.getNextNode());
-        currentNode.setValue(nextNode);
+        if (nextNode == null || nextNode.getChoices().isEmpty()) {
+            currentNode.setValue(null);
+        } else {
+            currentNode.setValue(nextNode);
+        }
     }
 
     public void resetStory(Context context) {
