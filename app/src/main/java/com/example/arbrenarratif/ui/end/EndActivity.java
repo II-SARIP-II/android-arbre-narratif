@@ -1,15 +1,18 @@
 package com.example.arbrenarratif.ui.end;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.arbrenarratif.R;
 import com.example.arbrenarratif.ui.main.MainActivity;
 
 public class EndActivity extends AppCompatActivity {
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +39,12 @@ public class EndActivity extends AppCompatActivity {
 
         Button restartButton = findViewById(R.id.restartButton);
         restartButton.setOnClickListener(v -> {
+            // Appliquer une animation de transition si désiré
             Intent intent = new Intent(EndActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
+            // Optionnel : ajouter une animation de transition
+            //overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
     }
-
 }
