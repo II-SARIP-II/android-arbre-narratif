@@ -14,8 +14,6 @@ public class EndActivity extends AppCompatActivity {
         setContentView(R.layout.activity_end);
 
         Button restartButton = findViewById(R.id.restartButton);
-
-        // Si tu souhaites permettre de recommencer l'histoire
         restartButton.setOnClickListener(v -> {
             Intent intent = new Intent(EndActivity.this, MainActivity.class);
             startActivity(intent);

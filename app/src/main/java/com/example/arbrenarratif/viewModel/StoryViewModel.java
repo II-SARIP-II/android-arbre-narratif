@@ -1,9 +1,7 @@
 package com.example.arbrenarratif.viewModel;
 
-import android.app.Application;
 import android.content.Context;
 
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -15,6 +13,8 @@ import com.example.arbrenarratif.data.repository.StoryRepository;
 public class StoryViewModel extends ViewModel {
     private StoryRepository repository;
     private MutableLiveData<StoryNode> currentNode = new MutableLiveData<>();
+    private MutableLiveData<Integer> ecoScore = new MutableLiveData<>(0);
+    private static final int START_NODE_ID = 1;
 
     public StoryViewModel(StoryRepository repository) {
         this.repository = repository;
@@ -24,14 +24,25 @@ public class StoryViewModel extends ViewModel {
         return currentNode;
     }
 
+    public LiveData<Integer> getEcoScore() {
+        return ecoScore;
+    }
+
     public void startStory(Context context) {
         repository.loadStory(context);
-        // Démarrer au nœud avec id = 1
-        currentNode.setValue(repository.getNodeById(1));
+        currentNode.setValue(repository.getNodeById(START_NODE_ID));
     }
 
     public void selectChoice(Choice choice) {
+        // Ajoute ton calcul de score ici si besoin
+        // ecoScore.setValue(ecoScore.getValue() + choice.getScore());
         StoryNode nextNode = repository.getNodeById(choice.getNextNode());
         currentNode.setValue(nextNode);
+    }
+
+    public void resetStory(Context context) {
+        ecoScore.setValue(0);
+        repository.loadStory(context);
+        currentNode.setValue(repository.getNodeById(START_NODE_ID));
     }
 }

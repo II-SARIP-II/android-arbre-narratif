@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Assure-toi que ce layout est correctement défini
+        setContentView(R.layout.activity_main);
 
         storyTextView = findViewById(R.id.storyTextView);
         choicesLayout = findViewById(R.id.choicesLayout);
@@ -36,21 +36,19 @@ public class MainActivity extends AppCompatActivity {
         StoryRepository repository = new StoryRepository();
         viewModel = new ViewModelProvider(this, new ViewModelFactory(repository)).get(StoryViewModel.class);
 
-        // TODO: 21/11/2024  implementer la fonctionnalité de fin & continue issue
+        // On réinitialise l’histoire avant de la lancer
+        viewModel.resetStory(this);
+        viewModel.startStory(this);
 
         viewModel.getCurrentNode().observe(this, storyNode -> {
             if (storyNode != null) {
                 updateStoryNode(storyNode);
             } else {
-                // Si le nœud est nul, c'est la fin de l'histoire
                 Intent intent = new Intent(MainActivity.this, EndActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
-
-        viewModel.startStory(this);
     }
 
     private void updateStoryNode(StoryNode node) {
