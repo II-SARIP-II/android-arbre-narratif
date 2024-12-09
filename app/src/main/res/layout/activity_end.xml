@@ -11,6 +11,7 @@
         android:id="@+id/endTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/font_eco"
         android:text="Fin de l'histoire !" />
 
     <TextView
@@ -18,12 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/font_eco"
         android:text="Score éco :" />
 
     <Button
         android:id="@+id/restartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/font_eco"
         android:text="@string/restart_button"
         android:layout_marginTop="16dp"
         />
