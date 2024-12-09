@@ -1,6 +1,7 @@
 package com.example.arbrenarratif.ui.main;
 
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -72,22 +73,34 @@ public class MainActivity extends AppCompatActivity {
         for (Choice choice : node.getChoices()) {
             Button button = new Button(this);
             button.setText(choice.getText());
-            button.setLayoutParams(new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT));
-            button.setPadding(16, 16, 16, 16);
-            button.setTextSize(16f);
-            button.setAllCaps(false);
-            button.setBackgroundResource(R.drawable.button_background); // Utilise le drawable personnalisé
-            button.setTextColor(getResources().getColor(R.color.white));
 
-            // Définir l'OnClickListener avec animation de pulse sur la page entière
+            // Crée des LayoutParams avec des marges
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT);
+            layoutParams.setMargins(16, 16, 16, 16); // Marges en pixels (gauche, haut, droite, bas)
+            button.setLayoutParams(layoutParams);
+
+            button.setPadding(16, 16, 16, 16); // Padding
+            button.setAllCaps(false);
+            button.setTextSize(20f);
+            button.setBackgroundColor(getResources().getColor(R.color.hunterGreen)); // Couleur de fond
+            button.setTextColor(getResources().getColor(R.color.ecru));
+
+            // Ajouter un border radius de 5px
+            GradientDrawable drawable = new GradientDrawable();
+            drawable.setCornerRadius(20f); // Rayon des coins arrondis (en pixels)
+            drawable.setColor(getResources().getColor(R.color.hunterGreen)); // La couleur de fond du bouton
+            button.setBackground(drawable);
+
+            // Définir l'OnClickListener avec animation de pulse
             button.setOnClickListener(v -> {
                 animatePagePulseAndProceed(choice);
             });
 
             choicesLayout.addView(button);
         }
+
     }
 
     private void animatePagePulseAndProceed(Choice choice) {
