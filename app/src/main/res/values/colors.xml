@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="darkGreen">#FF14281D</color>
+    <color name="hunterGreen">#FF355834</color>
+    <color name="fieldDrab">#FF6E633D</color>
+    <color name="ecru">#FFC2A878</color>
+    <color name="babyPowder">#FFF1F5F2</color>
 </resources>
