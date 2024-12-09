@@ -1,137 +1,192 @@
 [
   {
     "id": 1,
-    "text": "Tu te tiens au cœur d'une métropole moderne, assombrie par une brume de pollution. Les arbres sont rares, les passants pressés. Une affiche annonce un projet de reboisement municipal. Que fais-tu ?",
+    "text": "Florent, tu te tiens au cœur d’une vallée autrefois luxuriante, aujourd’hui rongée par la sécheresse et la pollution. Au loin, une rivière asséchée serpente entre des collines dénudées. Les habitants du village adjacent dépérissent, cherchant des solutions durables. Que fais-tu en premier lieu ?",
     "choices": [
-      { "text": "Te diriger vers le parc municipal", "nextNode": 2, "score": 0 },
-      { "text": "Ignorer l'affiche et prendre un taxi pour traverser la ville", "nextNode": 3, "score": -1 }
+      { "text": "Proposer une réunion avec les anciens pour discuter d’un plan de reforestation", "nextNode": 2, "score": 3 },
+      { "text": "Négocier avec un industriel local pour obtenir un soutien financier rapide", "nextNode": 3, "score": 0 },
+      { "text": "Ignorer la détresse du village et partir explorer la région seul", "nextNode": 4, "score": -2 },
+      { "text": "Suggérer de construire une petite centrale hydroélectrique sans études préalables", "nextNode": 5, "score": -1 }
     ]
   },
   {
     "id": 2,
-    "text": "Tu entres dans un petit parc encerclé de tours. Quelques bénévoles plantent de jeunes arbres. L'organisatrice, Jeanne, t'interpelle. Elle te demande de l'aide. Que fais-tu ?",
+    "text": "Les anciens, assis en cercle, écoutent attentivement tes propositions. Ils proposent un projet de pépinière et de distribution de graines locales, mais cela prendra du temps. Le village doute. Comment agis-tu ?",
     "choices": [
-      { "text": "Accepter d'aider à planter des arbres", "nextNode": 4, "score": 2 },
-      { "text": "Refuser, prétextant un manque de temps, et partir vers une rue adjacente", "nextNode": 5, "score": 0 }
+      { "text": "Insister sur la patience et l’éducation écologique", "nextNode": 6, "score": 3 },
+      { "text": "Chercher une subvention auprès d’ONG environnementales", "nextNode": 7, "score": 2 },
+      { "text": "Faire pression pour une solution immédiate, quitte à importer des espèces non endémiques", "nextNode": 8, "score": -1 },
+      { "text": "Abandonner cette idée et passer à autre chose", "nextNode": 9, "score": -2 }
     ]
   },
   {
     "id": 3,
-    "text": "Tu prends un taxi qui roule au diesel. Le chauffeur se plaint de la pollution, mais ne fait rien pour changer. Sur le chemin, tu vois un centre de recyclage abandonné. Le taxi te propose de t’arrêter. Que fais-tu ?",
+    "text": "L’industriel, méfiant, exige en échange des concessions sur l’extraction de ressources. La pollution pourrait empirer, mais l’argent aiderait. Comment poursuis-tu ?",
     "choices": [
-      { "text": "Descendre et inspecter le centre de recyclage", "nextNode": 6, "score": 1 },
-      { "text": "Continuer jusqu'au grand centre commercial pour faire du shopping", "nextNode": 7, "score": -2 }
+      { "text": "Accepter le deal et utiliser l’argent pour des projets verts plus tard", "nextNode": 6, "score": -1 },
+      { "text": "Refuser catégoriquement et chercher d’autres partenaires", "nextNode": 7, "score": 2 },
+      { "text": "Négocier des normes environnementales strictes avant de signer", "nextNode": 8, "score": 1 },
+      { "text": "Menacer de dénoncer publiquement l’industriel s’il n’aide pas sans contrepartie", "nextNode": 9, "score": 0 }
     ]
   },
   {
     "id": 4,
-    "text": "En plantant de jeunes pousses, tu ressens un lien fort avec la nature. Jeanne te parle d'une ancienne forêt non loin d'ici, menacée par un projet immobilier. Elle te propose d'aller rencontrer les anciens du quartier. Que fais-tu ?",
+    "text": "Tu erres seul, tu découvres des zones dévastées par l’agriculture intensive. Sans agir, le temps file. Tu pourrais revenir au village ou chercher un autre lieu. Que décides-tu ?",
     "choices": [
-      { "text": "Aller rencontrer les anciens et défendre la forêt", "nextNode": 8, "score": 2 },
-      { "text": "Rester ici et continuer à planter sans chercher plus loin", "nextNode": 9, "score": 1 }
+      { "text": "Revenir et aider le village malgré ton retard", "nextNode": 6, "score": 1 },
+      { "text": "Aller voir un camp de scientifiques plus au nord", "nextNode": 7, "score": 2 },
+      { "text": "Tenter de survivre seul, bâtir un petit refuge provisoire", "nextNode": 8, "score": 0 },
+      { "text": "Ignorer la région, poursuivre ta route sans te soucier des conséquences", "nextNode": 9, "score": -2 }
     ]
   },
   {
     "id": 5,
-    "text": "Tu déambules dans une rue bruyante. Un agent de nettoyage passe, utilisant un désherbant chimique. Il te propose d'aider à accélérer le 'nettoyage' de la ville. Que fais-tu ?",
+    "text": "La petite centrale est érigée à la hâte. Quelques habitants sont révoltés : tu as compromis la rivière déjà fragile. L’énergie est là, mais à quel prix ? Comment réagis-tu ?",
     "choices": [
-      { "text": "Accepter et répandre le désherbant", "nextNode": 10, "score": -3 },
-      { "text": "Refuser et chercher une boutique vendant des produits écolos", "nextNode": 11, "score": 1 }
+      { "text": "Organiser une consultation publique pour corriger tes erreurs", "nextNode": 6, "score": 1 },
+      { "text": "Ignorer les protestations et profiter de l’électricité", "nextNode": 7, "score": -2 },
+      { "text": "Demander conseil aux experts écologues locaux", "nextNode": 8, "score": 2 },
+      { "text": "Planter rapidement des roseaux filtrants autour de la rivière", "nextNode": 9, "score": 3 }
     ]
   },
   {
     "id": 6,
-    "text": "Le centre de recyclage est désert. Des tas de papiers, cartons et plastiques s'amoncellent. Tu trouves un outil cassé. Un guide local, Malik, arrive et te dit qu’on cherche des mains pour relancer le tri. Que fais-tu ?",
+    "text": "Ton engagement commence à porter ses fruits. Le village s’organise, le sol se régénère lentement. Une opportunité se présente : un groupe de nomades éco-responsables veut échanger des semences résistantes. Que fais-tu ?",
     "choices": [
-      { "text": "Aider Malik à trier et réparer le centre", "nextNode": 12, "score": 3 },
-      { "text": "Ignorer et repartir en direction du centre-ville pollué", "nextNode": 13, "score": 0 }
+      { "text": "Accepter volontiers et partager tes connaissances", "nextNode": 10, "score": 3 },
+      { "text": "Exiger un troc déséquilibré en ta faveur", "nextNode": 11, "score": -1 },
+      { "text": "Refuser, par crainte d’introduire de nouvelles maladies", "nextNode": 12, "score": 0 },
+      { "text": "Collaborer, mais imposer tes propres conditions strictes", "nextNode": 13, "score": 1 }
     ]
   },
   {
     "id": 7,
-    "text": "Le centre commercial est grand, climatisé et lumineux, mais plein de gadgets inutiles. Tu remarques un stand vendant des bouteilles en plastique à usage unique et un autre proposant des gourdes réutilisables. Que fais-tu ?",
+    "text": "Tu obtiennes certaines ressources, mais le climat social se tend. Le village se divise entre écologie stricte et compromis économiques. Tu fais face à une grève de jeunes habitants. Ta réaction ?",
     "choices": [
-      { "text": "Acheter une gourde réutilisable", "nextNode": 14, "score": 2 },
-      { "text": "Acheter une bouteille jetable moins chère", "nextNode": 15, "score": -2 }
+      { "text": "Dialoguer ouvertement avec les grévistes", "nextNode": 10, "score": 2 },
+      { "text": "Réprimer leur mouvement", "nextNode": 11, "score": -3 },
+      { "text": "Proposer un atelier d’éducation environnementale", "nextNode": 12, "score": 3 },
+      { "text": "Ignorer leurs revendications", "nextNode": 13, "score": -2 }
     ]
   },
   {
     "id": 8,
-    "text": "Les anciens te racontent l’histoire de la forêt. Elle abritait jadis une flore et une faune remarquables. Un promoteur veut la raser pour un parking. Ils te donnent un plan indiquant un passage secret. Que fais-tu ?",
+    "text": "Tu as laissé certains problèmes couver, et la terre se fatigue. Une sécheresse plus sévère menace. Les plantes peinent à repousser. Un vieux chercheur propose d’installer des panneaux solaires. Que fais-tu ?",
     "choices": [
-      { "text": "Suivre le passage secret pour protéger la forêt", "nextNode": 16, "score": 3 },
-      { "text": "Abandonner, c’est trop risqué", "nextNode": 17, "score": 0 }
+      { "text": "Accepter et diversifier les sources d’énergie", "nextNode": 10, "score": 2 },
+      { "text": "Refuser, craignant le coût et l’impact visuel", "nextNode": 11, "score": -1 },
+      { "text": "Installer des panneaux au détriment des terres agricoles", "nextNode": 12, "score": 0 },
+      { "text": "Chercher d’autres technologies plus douces", "nextNode": 13, "score": 1 }
     ]
   },
   {
     "id": 9,
-    "text": "En continuant à planter, tu vois la ville changer légèrement. Quelques passants s’arrêtent, curieux, certains t’imitent et plantent eux aussi. La journée passe. Une douce lumière verte éclaire le parc. Fin de l’histoire.",
-    "choices": []
+    "text": "L’inertie et la confusion règnent. Le village perd espoir. Des rumeurs circulent : un investisseur étranger veut racheter la vallée pour en faire un parc privé. Comment gères-tu cette crise ?",
+    "choices": [
+      { "text": "Tenter de racheter le silence de l’investisseur", "nextNode": 10, "score": -2 },
+      { "text": "Mobiliser le village pour protester officiellement", "nextNode": 11, "score": 2 },
+      { "text": "Négocier une cogestion du parc avec l’investisseur", "nextNode": 12, "score": 1 },
+      { "text": "Laisser faire et partir d’ici", "nextNode": 13, "score": -3 }
+    ]
   },
   {
     "id": 10,
-    "text": "Le désherbant se répand, tu vois l’herbe jaunir et la terre s’appauvrir. L’agent te remercie, mais la ville n’y gagne rien. Les oiseaux fuient, et tu ressens un vide. Fin de l’histoire.",
-    "choices": []
+    "text": "Les semences repoussent, quelques arbres apparaissent. Le moral remonte. On te propose d’organiser un réseau de distribution d’eau filtrée. Comment procèdes-tu ?",
+    "choices": [
+      { "text": "Créer un réseau participatif avec tarif équitable", "nextNode": 14, "score": 3 },
+      { "text": "Tarifer l’eau à un prix élevé pour faire du profit", "nextNode": 15, "score": -2 },
+      { "text": "Limiter l’accès à l’eau aux plus actifs écologiquement", "nextNode": 16, "score": 0 },
+      { "text": "Tout offrir gratuitement, mais sans garantie de pérennité", "nextNode": 17, "score": 1 }
+    ]
   },
   {
     "id": 11,
-    "text": "Tu tombes sur une petite boutique écoresponsable. À l’intérieur, on vend des semences, des lampes solaires et des filtres à eau. Le vendeur t’explique comment créer un mini-jardin sur un balcon. Que fais-tu ?",
+    "text": "Le dialogue a permis de calmer les tensions, mais des ressources manquent encore. Un leader voisin propose une alliance régionale. Comment réagis-tu ?",
     "choices": [
-      { "text": "Acheter des semences et t’engager à reverdir ton balcon", "nextNode": 18, "score": 2 },
-      { "text": "Rien acheter et partir en soupirant", "nextNode": 19, "score": 0 }
+      { "text": "Accepter l’alliance et partager tes techniques", "nextNode": 14, "score": 3 },
+      { "text": "Exiger des concessions drastiques des alliés", "nextNode": 15, "score": -1 },
+      { "text": "Rejeter l’alliance, préserver ton indépendance", "nextNode": 16, "score": 0 },
+      { "text": "Signer l’alliance tout en prévoyant d’en tirer un avantage personnel", "nextNode": 17, "score": 1 }
     ]
   },
   {
     "id": 12,
-    "text": "Avec Malik, tu sépares le carton, le plastique, le verre. Le stock s’organise, il contacte des bénévoles. Vous relancez une petite filière de recyclage. Quelques journaux locaux en parlent. Fin de l’histoire.",
-    "choices": []
+    "text": "Les conditions climatiques s’aggravent. Tu dois adapter l’agriculture locale. Un agronome suggère des cultures mixtes plus résilientes. Que décides-tu ?",
+    "choices": [
+      { "text": "Adopter ces cultures avec enthousiasme", "nextNode": 14, "score": 3 },
+      { "text": "Hésiter et n’appliquer qu’une partie des conseils", "nextNode": 15, "score": 0 },
+      { "text": "Imposer des monocultures plus simples à gérer", "nextNode": 16, "score": -2 },
+      { "text": "Abandonner l’agriculture locale et importer la nourriture", "nextNode": 17, "score": -3 }
+    ]
   },
   {
     "id": 13,
-    "text": "Tu retournes vers le centre-ville, la pollution t’enveloppe. Les gens semblent indifférents. Sans avoir fait de différence, tu rentres chez toi, épuisé. Fin de l’histoire.",
-    "choices": []
+    "text": "Le village survit, mais ne prospère pas. Un groupe de militants internationaux offre un soutien technique. C’est l’opportunité d’améliorer ta gouvernance écologique. Que fais-tu ?",
+    "choices": [
+      { "text": "Ouvrir le village à leurs formations", "nextNode": 14, "score": 3 },
+      { "text": "S’en méfier et limiter leur influence", "nextNode": 15, "score": 0 },
+      { "text": "Les utiliser comme main-d’œuvre gratuite", "nextNode": 16, "score": -2 },
+      { "text": "Refuser toute aide extérieure", "nextNode": 17, "score": -1 }
+    ]
   },
   {
     "id": 14,
-    "text": "La gourde à la main, tu sors du centre commercial. Des militants écologistes distribuent des flyers sur la réduction des déchets. L’un d’eux t’invite à une réunion citoyenne pour agir. Que fais-tu ?",
+    "text": "Grâce à tes efforts, un écosystème renaît. Les arbres et les animaux reviennent peu à peu. Tu dois finaliser une charte de gouvernance écologique. Comment la rédiges-tu ?",
     "choices": [
-      { "text": "Participer à la réunion", "nextNode": 20, "score": 3 },
-      { "text": "Ignorer et rentrer chez toi", "nextNode": 21, "score": 0 }
+      { "text": "Inclure tous les habitants dans la prise de décision", "nextNode": 18, "score": 3 },
+      { "text": "Ne donner le pouvoir qu’aux experts", "nextNode": 19, "score": 0 },
+      { "text": "Imposer tes règles sans consultation", "nextNode": 20, "score": -2 },
+      { "text": "Rendre la charte vague et sans contraintes", "nextNode": 21, "score": -1 }
     ]
   },
   {
     "id": 15,
-    "text": "La bouteille jetable finira sans doute à la poubelle. À la sortie du centre, une pluie acide tombe, les sols sont affaiblis. Tu sens que ton choix n’aide pas. Fin de l’histoire.",
-    "choices": []
+    "text": "Le village est fonctionnel, mais tu sens que les gens sont fatigués. On te propose de conclure un accord avec une réserve naturelle voisine. Comment agis-tu ?",
+    "choices": [
+      { "text": "Signer un accord de préservation mutuelle", "nextNode": 18, "score": 3 },
+      { "text": "Exiger que la réserve t’envoie des ressources sans contrepartie", "nextNode": 19, "score": -2 },
+      { "text": "Négocier un échange d’expertise équilibré", "nextNode": 20, "score": 1 },
+      { "text": "Refuser l’accord et isoler le village", "nextNode": 21, "score": -1 }
+    ]
   },
   {
     "id": 16,
-    "text": "Tu empruntes le passage secret, découvres une clairière au cœur de la forêt menacée. Des animaux rares y vivent encore. En prenant des photos et les montrant à Jeanne et aux anciens, vous lancez une pétition. La forêt est préservée. Fin de l’histoire.",
-    "choices": []
+    "text": "La biodiversité se stabilise, mais la tension sociale demeure. Un conseil d’habitants réclame plus de transparence. Comment réponds-tu ?",
+    "choices": [
+      { "text": "Publier régulièrement des rapports écologiques détaillés", "nextNode": 18, "score": 3 },
+      { "text": "Ne donner d’informations qu’à certains privilégiés", "nextNode": 19, "score": -1 },
+      { "text": "Communiquer seulement en cas de crise", "nextNode": 20, "score": 0 },
+      { "text": "Refuser toute transparence", "nextNode": 21, "score": -2 }
+    ]
   },
   {
     "id": 17,
-    "text": "Tu laisses les anciens à leur tristesse. La forêt sera sans doute détruite, et tu rentres chez toi sans avoir agi. Fin de l’histoire.",
-    "choices": []
+    "text": "Les ressources sont mieux gérées, mais le futur est encore incertain. On te demande de faire un dernier choix stratégique pour pérenniser les efforts. Que fais-tu ?",
+    "choices": [
+      { "text": "Former un réseau inter-villages pour partager les solutions durables", "nextNode": 18, "score": 3 },
+      { "text": "Tenter de capitaliser sur la situation pour enrichir une élite locale", "nextNode": 19, "score": -2 },
+      { "text": "Dresser des lois fermes mais justes, en sanctionnant les abus", "nextNode": 20, "score": 1 },
+      { "text": "Laisser place à une gouvernance laxiste et non structurée", "nextNode": 21, "score": -1 }
+    ]
   },
   {
     "id": 18,
-    "text": "Au fil des jours, tu plantes sur ton balcon, tu économises l’eau, et le voisinage s’inspire de tes actions. Une petite oasis urbaine naît autour de chez toi. Fin de l’histoire.",
-    "choices": []
+    "text": "FIN POSITIVE : Les années passent, la vallée retrouve sa splendeur. La forêt est dense, la rivière claire, les espèces prospèrent. Les habitants vivent en harmonie avec la nature et sont devenus un modèle pour d’autres communautés. Ton nom est associé à la renaissance écologique.",
+    "choices":[]
   },
   {
     "id": 19,
-    "text": "Tu repars, indifférent, laissant passer une opportunité. Le temps file, la pollution persiste. Fin de l’histoire.",
-    "choices": []
+    "text": "FIN MITIGÉE : La vallée survit, les ressources sont suffisantes mais l’équilibre reste fragile. Le village avance sans grande passion, oscillant entre compromis et petits arrangements. Ton rôle fut utile, mais la vision écologique n’est pas pleinement réalisée.",
+    "choices":[]
   },
   {
     "id": 20,
-    "text": "À la réunion, tu rencontres des gens motivés, vous montez un collectif citoyen, proposez des projets verts (pistes cyclables, verdissement des toits). La municipalité écoute. Fin de l’histoire.",
-    "choices": []
+    "text": "FIN DIFFICILE : La vallée peine à se remettre. Quelques improvements ont eu lieu, mais la corruption, la mauvaise gestion et le manque d’implication écologique persistent. Le paysage est terne, la survie des habitants incertaine. On se souviendra de tes efforts, mais aussi de tes erreurs.",
+    "choices":[]
   },
   {
     "id": 21,
-    "text": "Tu rentres chez toi, sans t’impliquer davantage. Le monde continue sans changement, et tu te sens un peu coupable. Fin de l’histoire.",
-    "choices": []
+    "text": "FIN NÉGATIVE : La vallée est perdue, les terres épuisées, la rivière morte, les habitants dispersés. Ton nom s’efface, lié à l’incapacité de prendre les bonnes décisions. C’est l’échec total, la nature n’a pas survécu à l’indifférence et aux compromis hasardeux.",
+    "choices":[]
   }
 ]
