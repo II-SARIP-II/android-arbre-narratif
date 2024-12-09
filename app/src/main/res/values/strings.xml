@@ -2,4 +2,6 @@
     <string name="app_name">arbreNarratif</string>
     <string name="end_message">Merci d\'avoir joué !</string>
     <string name="restart_button">Recommencer l\'histoire</string>
+    <string name="make_a_choice">Faites votre choix</string>
+    <string name="score_image">Score image</string>
 </resources>
