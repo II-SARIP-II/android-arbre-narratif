@@ -4,6 +4,8 @@ public class Choice {
     private String text;
     private int nextNode;
 
+    private int score;
+
     // Constructeur par défaut requis pour Gson
     public Choice() {
     }
@@ -32,5 +34,9 @@ public class Choice {
                 "text='" + text + '\'' +
                 ", nextNode=" + nextNode +
                 '}';
+    }
+
+    public int getScore() {
+        return score;
     }
 }

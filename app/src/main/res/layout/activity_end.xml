@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
@@ -13,9 +12,18 @@
         android:layout_height="wrap_content"
         android:text="Fin de l'histoire !" />
 
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Score éco :" />
+
     <Button
         android:id="@+id/restartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/restart_button" />
+        android:text="@string/restart_button"
+        android:layout_marginTop="16dp"
+        />
 </LinearLayout>

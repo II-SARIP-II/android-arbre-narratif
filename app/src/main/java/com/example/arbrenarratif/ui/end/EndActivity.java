@@ -16,8 +16,23 @@ public class EndActivity extends AppCompatActivity {
         setContentView(R.layout.activity_end);
 
         String finalNodeText = getIntent().getStringExtra("finalNodeText");
+        int finalScore = getIntent().getIntExtra("finalScore", 0);
+
         TextView endTextView = findViewById(R.id.endTextView);
+        TextView scoreTextView = findViewById(R.id.scoreTextView);
+
         endTextView.setText(finalNodeText);
+
+        String appreciation;
+        if (finalScore >= 5) {
+            appreciation = "Tu as été très écoresponsable !";
+        } else if (finalScore >= 0) {
+            appreciation = "Tu as fait quelques efforts, mais peux mieux faire.";
+        } else {
+            appreciation = "Tes choix ont été assez nocifs pour l’environnement...";
+        }
+
+        scoreTextView.setText("Score Éco : " + finalScore + "\n" + appreciation);
 
         Button restartButton = findViewById(R.id.restartButton);
         restartButton.setOnClickListener(v -> {
@@ -26,4 +41,5 @@ public class EndActivity extends AppCompatActivity {
             finish();
         });
     }
+
 }

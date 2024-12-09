@@ -36,20 +36,15 @@ public class StoryViewModel extends ViewModel {
 
     public void selectChoice(Choice choice) {
         StoryNode nextNode = repository.getNodeById(choice.getNextNode());
-        // Si nextNode est null, on est en fin d’histoire mais sans dernier noeud (rares cas)
-        // Dans ce cas, lastNode reste sur le noeud actuel
-        if (nextNode == null) {
-            currentNode.setValue(null);
-            return;
+        if (choice.getScore() != 0) {
+            ecoScore.setValue(ecoScore.getValue() + choice.getScore());
         }
 
-        // Si le nextNode n'a pas de choix, c'est qu'on est au dernier noeud de l’histoire
-        if (nextNode.getChoices() == null || nextNode.getChoices().isEmpty()) {
-            // On met à jour lastNode AVANT de mettre currentNode à null
+        if (nextNode == null || nextNode.getChoices() == null || nextNode.getChoices().isEmpty()) {
+            // Fin de l'histoire
             lastNode = nextNode;
             currentNode.setValue(null);
         } else {
-            // Noeud normal, on continue
             lastNode = nextNode;
             currentNode.setValue(nextNode);
         }
