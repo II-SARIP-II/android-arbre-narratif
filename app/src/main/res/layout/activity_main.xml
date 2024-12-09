@@ -31,22 +31,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/makeAChoice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@color/darkGreen"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="make_a_choice"
-            android:fontFamily="@font/font_eco"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@+id/storyTextView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <LinearLayout
             android:id="@+id/choicesLayout"
             android:orientation="vertical"
