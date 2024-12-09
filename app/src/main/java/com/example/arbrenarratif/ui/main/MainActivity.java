@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
             if (storyNode != null) {
                 updateStoryNode(storyNode);
             } else {
+                String finalText = viewModel.getLastNodeText(); // Méthode à créer dans le ViewModel
                 Intent intent = new Intent(MainActivity.this, EndActivity.class);
+                intent.putExtra("finalNodeText", finalText);
                 startActivity(intent);
                 finish();
             }

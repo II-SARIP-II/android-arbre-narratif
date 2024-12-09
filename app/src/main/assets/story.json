@@ -1,31 +1,137 @@
 [
   {
     "id": 1,
-    "text": "Vous êtes dans une forêt sombre. Que faites-vous ?",
+    "text": "Tu te tiens au cœur d'une métropole moderne, assombrie par une brume de pollution. Les arbres sont rares, les passants pressés. Une affiche annonce un projet de reboisement municipal. Que fais-tu ?",
     "choices": [
-      { "text": "Aller à gauche", "nextNode": 2 },
-      { "text": "Aller à droite", "nextNode": 3 }
+      { "text": "Te diriger vers le parc municipal", "nextNode": 2, "score": 0 },
+      { "text": "Ignorer l'affiche et prendre un taxi pour traverser la ville", "nextNode": 3, "score": -1 }
     ]
   },
   {
     "id": 2,
-    "text": "Vous trouvez une rivière. Que faites-vous ?",
+    "text": "Tu entres dans un petit parc encerclé de tours. Quelques bénévoles plantent de jeunes arbres. L'organisatrice, Jeanne, t'interpelle. Elle te demande de l'aide. Que fais-tu ?",
     "choices": [
-      { "text": "Traverser la rivière", "nextNode": 4 },
-      { "text": "Retourner dans la forêt", "nextNode": 1 }
+      { "text": "Accepter d'aider à planter des arbres", "nextNode": 4, "score": 2 },
+      { "text": "Refuser, prétextant un manque de temps, et partir vers une rue adjacente", "nextNode": 5, "score": 0 }
     ]
   },
   {
     "id": 3,
-    "text": "Un ours bloque votre chemin. Que faites-vous ?",
+    "text": "Tu prends un taxi qui roule au diesel. Le chauffeur se plaint de la pollution, mais ne fait rien pour changer. Sur le chemin, tu vois un centre de recyclage abandonné. Le taxi te propose de t’arrêter. Que fais-tu ?",
     "choices": [
-      { "text": "Fuir en courant", "nextNode": 4 },
-      { "text": "Essayer de négocier", "nextNode": 2 }
+      { "text": "Descendre et inspecter le centre de recyclage", "nextNode": 6, "score": 1 },
+      { "text": "Continuer jusqu'au grand centre commercial pour faire du shopping", "nextNode": 7, "score": -2 }
     ]
   },
   {
     "id": 4,
-    "text": "Vous trouvez une clairière paisible. Fin de l'histoire.",
+    "text": "En plantant de jeunes pousses, tu ressens un lien fort avec la nature. Jeanne te parle d'une ancienne forêt non loin d'ici, menacée par un projet immobilier. Elle te propose d'aller rencontrer les anciens du quartier. Que fais-tu ?",
+    "choices": [
+      { "text": "Aller rencontrer les anciens et défendre la forêt", "nextNode": 8, "score": 2 },
+      { "text": "Rester ici et continuer à planter sans chercher plus loin", "nextNode": 9, "score": 1 }
+    ]
+  },
+  {
+    "id": 5,
+    "text": "Tu déambules dans une rue bruyante. Un agent de nettoyage passe, utilisant un désherbant chimique. Il te propose d'aider à accélérer le 'nettoyage' de la ville. Que fais-tu ?",
+    "choices": [
+      { "text": "Accepter et répandre le désherbant", "nextNode": 10, "score": -3 },
+      { "text": "Refuser et chercher une boutique vendant des produits écolos", "nextNode": 11, "score": 1 }
+    ]
+  },
+  {
+    "id": 6,
+    "text": "Le centre de recyclage est désert. Des tas de papiers, cartons et plastiques s'amoncellent. Tu trouves un outil cassé. Un guide local, Malik, arrive et te dit qu’on cherche des mains pour relancer le tri. Que fais-tu ?",
+    "choices": [
+      { "text": "Aider Malik à trier et réparer le centre", "nextNode": 12, "score": 3 },
+      { "text": "Ignorer et repartir en direction du centre-ville pollué", "nextNode": 13, "score": 0 }
+    ]
+  },
+  {
+    "id": 7,
+    "text": "Le centre commercial est grand, climatisé et lumineux, mais plein de gadgets inutiles. Tu remarques un stand vendant des bouteilles en plastique à usage unique et un autre proposant des gourdes réutilisables. Que fais-tu ?",
+    "choices": [
+      { "text": "Acheter une gourde réutilisable", "nextNode": 14, "score": 2 },
+      { "text": "Acheter une bouteille jetable moins chère", "nextNode": 15, "score": -2 }
+    ]
+  },
+  {
+    "id": 8,
+    "text": "Les anciens te racontent l’histoire de la forêt. Elle abritait jadis une flore et une faune remarquables. Un promoteur veut la raser pour un parking. Ils te donnent un plan indiquant un passage secret. Que fais-tu ?",
+    "choices": [
+      { "text": "Suivre le passage secret pour protéger la forêt", "nextNode": 16, "score": 3 },
+      { "text": "Abandonner, c’est trop risqué", "nextNode": 17, "score": 0 }
+    ]
+  },
+  {
+    "id": 9,
+    "text": "En continuant à planter, tu vois la ville changer légèrement. Quelques passants s’arrêtent, curieux, certains t’imitent et plantent eux aussi. La journée passe. Une douce lumière verte éclaire le parc. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 10,
+    "text": "Le désherbant se répand, tu vois l’herbe jaunir et la terre s’appauvrir. L’agent te remercie, mais la ville n’y gagne rien. Les oiseaux fuient, et tu ressens un vide. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 11,
+    "text": "Tu tombes sur une petite boutique écoresponsable. À l’intérieur, on vend des semences, des lampes solaires et des filtres à eau. Le vendeur t’explique comment créer un mini-jardin sur un balcon. Que fais-tu ?",
+    "choices": [
+      { "text": "Acheter des semences et t’engager à reverdir ton balcon", "nextNode": 18, "score": 2 },
+      { "text": "Rien acheter et partir en soupirant", "nextNode": 19, "score": 0 }
+    ]
+  },
+  {
+    "id": 12,
+    "text": "Avec Malik, tu sépares le carton, le plastique, le verre. Le stock s’organise, il contacte des bénévoles. Vous relancez une petite filière de recyclage. Quelques journaux locaux en parlent. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 13,
+    "text": "Tu retournes vers le centre-ville, la pollution t’enveloppe. Les gens semblent indifférents. Sans avoir fait de différence, tu rentres chez toi, épuisé. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 14,
+    "text": "La gourde à la main, tu sors du centre commercial. Des militants écologistes distribuent des flyers sur la réduction des déchets. L’un d’eux t’invite à une réunion citoyenne pour agir. Que fais-tu ?",
+    "choices": [
+      { "text": "Participer à la réunion", "nextNode": 20, "score": 3 },
+      { "text": "Ignorer et rentrer chez toi", "nextNode": 21, "score": 0 }
+    ]
+  },
+  {
+    "id": 15,
+    "text": "La bouteille jetable finira sans doute à la poubelle. À la sortie du centre, une pluie acide tombe, les sols sont affaiblis. Tu sens que ton choix n’aide pas. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 16,
+    "text": "Tu empruntes le passage secret, découvres une clairière au cœur de la forêt menacée. Des animaux rares y vivent encore. En prenant des photos et les montrant à Jeanne et aux anciens, vous lancez une pétition. La forêt est préservée. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 17,
+    "text": "Tu laisses les anciens à leur tristesse. La forêt sera sans doute détruite, et tu rentres chez toi sans avoir agi. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 18,
+    "text": "Au fil des jours, tu plantes sur ton balcon, tu économises l’eau, et le voisinage s’inspire de tes actions. Une petite oasis urbaine naît autour de chez toi. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 19,
+    "text": "Tu repars, indifférent, laissant passer une opportunité. Le temps file, la pollution persiste. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 20,
+    "text": "À la réunion, tu rencontres des gens motivés, vous montez un collectif citoyen, proposez des projets verts (pistes cyclables, verdissement des toits). La municipalité écoute. Fin de l’histoire.",
+    "choices": []
+  },
+  {
+    "id": 21,
+    "text": "Tu rentres chez toi, sans t’impliquer davantage. Le monde continue sans changement, et tu te sens un peu coupable. Fin de l’histoire.",
     "choices": []
   }
 ]
