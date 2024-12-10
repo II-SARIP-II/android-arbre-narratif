@@ -1,0 +1,17 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fond de la barre -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray" />
+        </shape>
+    </item>
+
+    <!-- Progression de la barre -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/white" /> <!-- Couleur initiale -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -7,4 +7,8 @@
     <color name="fieldDrab">#FF6E633D</color>
     <color name="ecru">#FFC2A878</color>
     <color name="babyPowder">#FFF1F5F2</color>
+    <!-- Couleurs pour la jauge -->
+    <color name="red">#D35E5E</color>
+    <color name="green">#69A069</color>
+    <color name="gray">#FFCCCCCC</color>
 </resources>

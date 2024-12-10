@@ -36,9 +36,9 @@ public class StoryViewModel extends ViewModel {
 
     public void selectChoice(Choice choice) {
         StoryNode nextNode = repository.getNodeById(choice.getNextNode());
-        if (choice.getScore() != 0) {
-            ecoScore.setValue(ecoScore.getValue() + choice.getScore());
-        }
+        int currentScore = ecoScore.getValue() != null ? ecoScore.getValue() : 0;
+        currentScore += choice.getScore();
+        ecoScore.setValue(currentScore);
 
         if (nextNode == null || nextNode.getChoices() == null || nextNode.getChoices().isEmpty()) {
             // Fin de l'histoire

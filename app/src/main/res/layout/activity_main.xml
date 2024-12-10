@@ -1,5 +1,5 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootLayout"
@@ -7,12 +7,18 @@
     android:layout_height="match_parent"
     android:background="@color/darkGreen"
     tools:context=".ui.main.MainActivity">
+
+    <!-- Contenu Principal -->
     <LinearLayout
-        android:id="@+id/mainLayout"
+        android:id="@+id/mainContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@id/gaugeContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/storyTextView"
@@ -20,26 +26,45 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@color/darkGreen"
-            android:gravity="center"
+            android:fontFamily="@font/font_eco"
+            android:gravity="start"
             android:padding="16dp"
             android:text="narrative_text"
             android:textColor="@color/babyPowder"
-            android:fontFamily="@font/font_eco"
-            android:textSize="25sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="parent" />
+            android:textSize="25sp" />
 
         <LinearLayout
             android:id="@+id/choicesLayout"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <!-- Les boutons des choix seront ajoutés ici dynamiquement -->
         </LinearLayout>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Jauge de Score en Bas -->
+    <LinearLayout
+        android:id="@+id/gaugeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
+        <ProgressBar
+            android:id="@+id/scoreGauge"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:indeterminate="false"
+            android:max="40"
+            android:progress="20"
+            android:progressDrawable="@drawable/progress_bar_styled"
+            android:background="@color/gray" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
