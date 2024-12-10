@@ -1,356 +1,356 @@
 [
   {
     "id": 1,
-    "text": "Antonin, tu travailles pour une grande entreprise polluante. On te confie un projet de déforestation pour installer une usine dans une forêt, avec un délai de six mois. Tu sera à bord d'un DOOSAN, un véhicule spécialisé dans la déforestation. Ce projet aurait un impact écologique majeur, mais assurerait ta promotion.",
+    "text": "Antonin, tu travailles pour une grande entreprise polluante. On te confie un projet de déforestation pour installer une usine dans une forêt, avec un délai de six mois. Tu seras à bord d'un DOOSAN, un véhicule spécialisé dans la déforestation. Ce projet aurait un impact écologique majeur, mais assurerait ta promotion.",
     "choices": [
-      { "text": "Tu refuses et démissionne sur le champs", "nextNode": 2, "score": -40 },
+      { "text": "Tu refuses et démissionnes sur le champ", "nextNode": 2, "score": -40 },
       { "text": "Tu acceptes le travail", "nextNode": 3, "score": 0 }
     ]
   },
   {
     "id": 2,
-    "text" : "Ton entreprise à embouché quelqu'un d'autre à ta place, la foret à été détruite, tous les animaux sont morts",
-    "choices" : []
+    "text": "Ton entreprise a embauché quelqu'un d'autre à ta place, la forêt a été détruite, tous les animaux sont morts",
+    "choices": []
   },
   {
     "id": 3,
-    "text" : "Tu arrives à ton travail. Que décides-tu de faire ?",
-    "choices" : [
-      {"text" :  "Tu procrastine le départ du projet pour essayer de saboter l'opération", "nextNode": 2 , "score": -40 },
-      {"text" :  "Tu vas faire du repérage de la forêt pour explorer un peu les environs", "nextNode": 4 , "score": 0 },
-      {"text" :  "Tu commences tout de suite ton travail et attaque le projet de déforestation", "nextNode": 22, "score": -2 }
+    "text": "Tu arrives à ton travail. Que décides-tu de faire ?",
+    "choices": [
+      { "text": "Tu procrastines le départ du projet pour essayer de saboter l'opération", "nextNode": 2, "score": -40 },
+      { "text": "Tu vas faire du repérage de la forêt pour explorer un peu les environs", "nextNode": 4, "score": 0 },
+      { "text": "Tu commences tout de suite ton travail et attaques le projet de déforestation", "nextNode": 22, "score": -2 }
     ]
   },
   {
     "id": 4,
-    "text" : "Tu observes différentes espèces d'abre, une riche biodiversité, un silence paisible",
-    "choices" : [
-      {"text" :  "Tu décides de te rebeller contre ton entreprise et sabote ton véhicule", "nextNode":  30, "score": 1},
-      {"text" :  "Tu décides de faire une pause et ne rien en te posant", "nextNode": 5, "score": 0},
-      {"text" :  "Continuer d'explorer", "nextNode": 7, "score": 0},
-      {"text" :  "Retourner à ta machine pour commencer la déforestation", "nextNode": 22, "score": -2}
+    "text": "Tu observes différentes espèces d'arbres, une riche biodiversité, un silence paisible",
+    "choices": [
+      { "text": "Tu décides de te rebeller contre ton entreprise et saboter ton véhicule", "nextNode": 30, "score": 1 },
+      { "text": "Tu décides de faire une pause et ne rien en te posant", "nextNode": 5, "score": 0 },
+      { "text": "Continuer d'explorer", "nextNode": 7, "score": 0 },
+      { "text": "Retourner à ta machine pour commencer la déforestation", "nextNode": 22, "score": -2 }
     ]
   },
   {
     "id": 5,
-    "text" : "Tu entends un grognement étrange dans un buisson",
-    "choices" : [
-      {"text" :  "Tu t'enfuie en poussant un cri strident", "nextNode":  6, "score":  -1},
-      {"text" :  "Tu décides d'aller voir", "nextNode":  7, "score":  0}
+    "text": "Tu entends un grognement étrange dans un buisson",
+    "choices": [
+      { "text": "Tu t'enfuies en poussant un cri strident", "nextNode": 6, "score": -1 },
+      { "text": "Tu décides d'aller voir", "nextNode": 7, "score": 0 }
     ]
   },
   {
     "id": 6,
-    "text" : "Tu es parti dans une direction au hasard et te retrouve complètement perdu",
-    "choices" : [
-      {"text" :  "Tu marches jusqu'a ressortir de la fôret pour commencer le projet", "nextNode":  22, "score":  -2},
-      {"text" :  "Tu retournes sur tes pas pour retrouver ton chemin", "nextNode":  4, "score":  0}
+    "text": "Tu es parti dans une direction au hasard et te retrouves complètement perdu",
+    "choices": [
+      { "text": "Tu marches jusqu'à ressortir de la forêt pour commencer le projet", "nextNode": 22, "score": -2 },
+      { "text": "Tu retournes sur tes pas pour retrouver ton chemin", "nextNode": 4, "score": 0 }
     ]
   },
   {
     "id": 7,
-    "text" : "Au loin, tu vois un mouvement étrange dans une fougère, un animal peut être ?",
-    "choices" : [
-      {"text" :  "Tu décides d'aller voir discretement", "nextNode": 8, "score":  0},
-      {"text" :  "Tu arrives rapidement et décide de mettre en coup de pied dans la fougère", "nextNode": 13, "score":  -3},
-      {"text" :  "S'enfuir", "nextNode":  6, "score":  -1}
+    "text": "Au loin, tu vois un mouvement étrange dans une fougère, un animal peut-être ?",
+    "choices": [
+      { "text": "Tu décides d'aller voir discrètement", "nextNode": 8, "score": 0 },
+      { "text": "Tu arrives rapidement et décides de mettre un coup de pied dans la fougère", "nextNode": 13, "score": -3 },
+      { "text": "S'enfuir", "nextNode": 6, "score": -1 }
     ]
   },
   {
     "id": 8,
-    "text" : "Tu y trouves une drôle de petite créature orange avec une longue moustache jaune",
-    "choices" : [
-      {"text" :  "Tu commences à lui parler doucement pour ne pas lui faire peur", "nextNode":  9, "score":  2},
-      {"text" :  "Tu t'enfuie en poussant un cri strident", "nextNode": 6, "score":  -2},
-      {"text" :  "Tu passes en mode self défense et lance ton meilleur Uraken. La créature est K.O en un coup", "nextNode": 13, "score":  -4}
+    "text": "Tu y trouves une drôle de petite créature orange avec une longue moustache jaune",
+    "choices": [
+      { "text": "Tu commences à lui parler doucement pour ne pas lui faire peur", "nextNode": 9, "score": 2 },
+      { "text": "Tu t'enfuies en poussant un cri strident", "nextNode": 6, "score": -2 },
+      { "text": "Tu passes en mode self-défense et lances ton meilleur Uraken. La créature est K.O en un coup", "nextNode": 13, "score": -4 }
     ]
   },
   {
     "id": 9,
-    "text" : "La créature te répond d'une voix sage et calme : Bonjour mon ami, je suis Rolax, l'esprit de la fôret",
-    "choices" : [
-      {"text" :  "Tu t'enfuie en poussant un cri strident", "nextNode": 6, "score":  -2},
-      {"text" :  "Intrigué, tu décides d'en apprendre plus et continue la discussion", "nextNode": 10, "score":  2},
-      {"text" :  "Tu prends peur et par surprise tu décide d'envoyer un puissant crochet du droit", "nextNode": 13, "score":  -4},
-      {"text" :  "Pensant avoir fait la découverte scientifique du siècle tu décides de le capturer et de le ramener avec toi", "nextNode": 15, "score":  -1}
+    "text": "La créature te répond d'une voix sage et calme : Bonjour mon ami, je suis Rolax, l'esprit de la forêt",
+    "choices": [
+      { "text": "Tu t'enfuies en poussant un cri strident", "nextNode": 6, "score": -2 },
+      { "text": "Intrigué, tu décides d'en apprendre plus et continues la discussion", "nextNode": 10, "score": 2 },
+      { "text": "Tu prends peur et par surprise, tu décides d'envoyer un puissant crochet du droit", "nextNode": 13, "score": -4 },
+      { "text": "Pensant avoir fait la découverte scientifique du siècle, tu décides de le capturer et de le ramener avec toi", "nextNode": 15, "score": -1 }
     ]
   },
   {
     "id": 10,
-    "text" : "Après une longue discussion tu apprends que Rolax, est l'esprit de la Fôret, qu'il est apparu il y a plus de mille ans, il finit par te demander : Mais alors que fait tu ici ?",
-    "choices" : [
-      {"text" :  "Mentir : Tu lui dis que tu es ici dans le but de protéger la forêt et ses animaux", "nextNode": 11, "score":  -2},
-      {"text" :  "Tu lui explique que tu es ici pour un projet de déforestation", "nextNode": 17, "score":  0}
+    "text": "Après une longue discussion, tu apprends que Rolax est l'esprit de la forêt, qu'il est apparu il y a plus de mille ans. Il finit par te demander : \"Mais alors, que fais-tu ici ?\"",
+    "choices": [
+      { "text": "Mentir : Tu lui dis que tu es ici dans le but de protéger la forêt et ses animaux", "nextNode": 11, "score": -2 },
+      { "text": "Tu lui expliques que tu es ici pour un projet de déforestation", "nextNode": 17, "score": 0 }
     ]
   },
   {
     "id": 11,
-    "text" : "Le Rolax te regarde dans les yeux, tu comprends qu'il sait que ce n'est pas vrai",
-    "choices" : [
-      {"text" :  "Continuer le mensonge", "nextNode": 12, "score":  -2},
-      {"text" :  "S'excuser et lui expliqué que tu es la pour un projet de déforestation", "nextNode": 17, "score":  1}
+    "text": "Le Rolax te regarde dans les yeux, tu comprends qu'il sait que ce n'est pas vrai",
+    "choices": [
+      { "text": "Continuer le mensonge", "nextNode": 12, "score": -2 },
+      { "text": "S'excuser et lui expliquer que tu es là pour un projet de déforestation", "nextNode": 17, "score": 1 }
     ]
   },
   {
     "id": 12,
-    "text" : "Rolax est devenu furax et te menace en disant : \"Maintenant, c'est soit tu abandonnes le projet, soit tu vas avoir de gros ennuies\"",
-    "choices" : [
-      {"text" :  "Continuer le projet", "nextNode": 27, "score":  -2},
-      {"text" :  "Retourner à l'entreprise pour commencer la déforestation", "nextNode": 22, "score":  -2},
-      {"text" :  "Partir et quitter son travail", "nextNode": 2, "score":  2},
-      {"text" :  "Se rebeller contre l'entreprise et saboter ton véhicule de déforestation", "nextNode": 30, "score":  3}
+    "text": "Rolax est devenu furieux et te menace en disant : \"Maintenant, c'est soit tu abandonnes le projet, soit tu vas avoir de grosses ennuis\"",
+    "choices": [
+      { "text": "Continuer le projet", "nextNode": 27, "score": -2 },
+      { "text": "Retourner à l'entreprise pour commencer la déforestation", "nextNode": 22, "score": -2 },
+      { "text": "Partir et quitter son travail", "nextNode": 2, "score": 2 },
+      { "text": "Se rebeller contre l'entreprise et saboter ton véhicule de déforestation", "nextNode": 30, "score": 3 }
     ]
   },
   {
     "id": 13,
-    "text" : "Joli coup ! Suite à cette action tu vois une créature orange avec une longue moustache jaune s'envoler sous la force de ton coup",
-    "choices" : [
-      {"text" :  "Tu laisses la créature au sol et retourne vers ton engins de déforestation", "nextNode": 22, "score":  -2},
-      {"text" :  "Après t'être calmer tu décides d'aller voir la créature", "nextNode": 14, "score":  1}
+    "text": "Joli coup ! Suite à cette action, tu vois une créature orange avec une longue moustache jaune s'envoler sous la force de ton coup",
+    "choices": [
+      { "text": "Tu laisses la créature au sol et retournes vers ton engin de déforestation", "nextNode": 22, "score": -2 },
+      { "text": "Après t'être calmé, tu décides d'aller voir la créature", "nextNode": 14, "score": 1 }
     ]
   },
   {
     "id": 14,
-    "text" : "La créature te répond d'une voix faible et douce \"Qu'ai-je fait pour attirer ta colère\"",
-    "choices" : [
-      {"text" :  "Tu t'enfuies en poussant un cri strident", "nextNode": 6, "score":  -2},
-      {"text" :  "Intrigué, que cette créature soit intélligente, tu t'excuses et essaye de continuer la discussion", "nextNode": 10, "score":  2},
-      {"text" :  "Pensant avoir fait la découverte scientifique du siècle tu décides de le capturer et de le ramener avec toi", "nextNode": 15, "score":  -1}
+    "text": "La créature te répond d'une voix faible et douce : \"Qu'ai-je fait pour attirer ta colère ?\"",
+    "choices": [
+      { "text": "Tu t'enfuies en poussant un cri strident", "nextNode": 6, "score": -2 },
+      { "text": "Intrigué que cette créature soit intelligente, tu t'excuses et essaies de continuer la discussion", "nextNode": 10, "score": 2 },
+      { "text": "Pensant avoir fait la découverte scientifique du siècle, tu décides de le capturer et de le ramener avec toi", "nextNode": 15, "score": -1 }
     ]
   },
   {
     "id": 15,
-    "text" : "En rentrant à la civilisation avec ta capture, que décide tu de faire ?",
-    "choices" : [
-      {"text" :  "Tu vas dans un laboratoire pour faire analyser la créature, sans te soucier de ce qu'ils lui feront subire", "nextNode": 18, "score":  -2},
-      {"text" :  "Tu regrette ton choix et tu cherches la forêt la plus proche pour laisser la créature en liberté", "nextNode": 16, "score":  2}
+    "text": "En rentrant à la civilisation avec ta capture, que décides-tu de faire ?",
+    "choices": [
+      { "text": "Tu vas dans un laboratoire pour faire analyser la créature, sans te soucier de ce qu'ils lui feront subir", "nextNode": 18, "score": -2 },
+      { "text": "Tu regrettes ton choix et tu cherches la forêt la plus proche pour laisser la créature en liberté", "nextNode": 16, "score": 2 }
     ]
   },
   {
     "id": 16,
-    "text" : "La créature, \"Rolax\", toujours sonné des évènements, te demande d'expliquer ton geste",
-    "choices" : [
-      {"text" :  "Lui mentir : dire que tu as fait ça pour le protéger et le sauver du projet de déforestation", "nextNode": 11, "score":  -1},
-      {"text" :  "Lui expliquer tu as paniquer et regrette ta décision, et tu lui explique le projet de déforestation", "nextNode": 17, "score":  0}
+    "text": "La créature, \"Rolax\", toujours sonnée des événements, te demande d'expliquer ton geste",
+    "choices": [
+      { "text": "Lui mentir : dire que tu as fait ça pour le protéger et le sauver du projet de déforestation", "nextNode": 11, "score": -1 },
+      { "text": "Lui expliquer que tu as paniqué et que tu regrettes ta décision, et que tu lui expliques le projet de déforestation", "nextNode": 17, "score": 0 }
     ]
   },
   {
     "id": 17,
-    "text" : "Son visage s'attriste, et il déclare : \"Oh c'est bien dommage, et que compte tu faire maintenant ?\"",
-    "choices" : [
-      {"text" :  "Quitter son travail", "nextNode": 2, "score":  -40},
-      {"text" :  "Commencer le projet", "nextNode": 12, "score":  -2},
-      {"text" :  "Se rebeller contre l'entreprise, et saboter ton véhicule", "nextNode": 30, "score":  2}
+    "text": "Son visage s'attriste, et il déclare : \"Oh, c'est bien dommage, et que comptes-tu faire maintenant ?\"",
+    "choices": [
+      { "text": "Quitter son travail", "nextNode": 2, "score": -40 },
+      { "text": "Commencer le projet", "nextNode": 12, "score": -2 },
+      { "text": "Se rebeller contre l'entreprise, et saboter ton véhicule", "nextNode": 30, "score": 2 }
     ]
   },
   {
     "id": 18,
-    "text" : "Les scientifiques contactent le gouvernement et un groupe d'homme en costume noir finissent par arriver et t'emmenes en cellule pour t'interroger",
-    "choices" : [
-      {"text" :  "Tu expliques que tu en diras rien a personne et qu'ils n'ont pas à se faire de soucis", "nextNode": 19, "score":  -1},
-      {"text" :  "Tu essaies de faire chanter les agents du gouvernement pour y pouvoir gagner le plus d'avantages possible", "nextNode": 19, "score":  -3},
-      {"text" :  "Tu tentes une manoeuvre pour t'échapper", "nextNode": 20, "score":  2}
+    "text": "Les scientifiques contactent le gouvernement et un groupe d'hommes en costume noir finit par arriver et t'emmène en cellule pour t'interroger",
+    "choices": [
+      { "text": "Tu expliques que tu n'en diras rien à personne et qu'ils n'ont pas à se faire de soucis", "nextNode": 19, "score": -1 },
+      { "text": "Tu essaies de faire chanter les agents du gouvernement pour y pouvoir gagner le plus d'avantages possible", "nextNode": 19, "score": -3 },
+      { "text": "Tu tentes une manœuvre pour t'échapper", "nextNode": 20, "score": 2 }
     ]
   },
   {
     "id": 19,
-    "text" : "Les agents ne t'apprécies pas et après t'être fait torturer pendant des heures ton coeur finit par lâcher, tu meurs, seul dans une cellule froide.",
-    "choices" : [
-      {"text" :  "Voir la suite", "nextNode": 2, "score":  -40}
+    "text": "Les agents ne t'apprécient pas et, après t'être fait torturer pendant des heures, ton cœur finit par lâcher. Tu meurs, seul dans une cellule froide.",
+    "choices": [
+      { "text": "Voir la suite", "nextNode": 2, "score": -40 }
     ]
   },
   {
     "id": 20,
-    "text" : "Pendant qu'un agent n'était pas attentif tu parviens à te détacher et réussis à t'échapper",
-    "choices" : [
-      {"text" :  "Tu cherches une sortie du complexe et décide de passer le reste de ta vie en exil", "nextNode": 21, "score":  -40},
-      {"text" :  "Tu décides de retourner chercher la créature au laboratoire dans l'espoir de la sauver", "nextNode": 21, "score":  -40}
+    "text": "Pendant qu'un agent n'était pas attentif, tu parviens à te détacher et réussis à t'échapper",
+    "choices": [
+      { "text": "Tu cherches une sortie du complexe et décides de passer le reste de ta vie en exil", "nextNode": 21, "score": -40 },
+      { "text": "Tu décides de retourner chercher la créature au laboratoire dans l'espoir de la sauver", "nextNode": 21, "score": -40 }
     ]
   },
   {
     "id": 21,
-    "text" : "Sur la route, tu es impliqué dans un terrible accident de voiture, tu meurs, la créature meurt également et sans l'esprit de la forêt la nature commence à dépérir",
-    "choices" : []
+    "text": "Sur la route, tu es impliqué dans un terrible accident de voiture, tu meurs, la créature meurt également et, sans l'esprit de la forêt, la nature commence à dépérir",
+    "choices": []
   },
   {
     "id": 22,
-    "text" : "Le premier arbre que tu coupes habritais une famille d'écureuils qui tombent et passent sous tes roues",
-    "choices" : [
-      {"text" :  "Tu descends de ton véhicule pour voir s'ils sont toujours en vie", "nextNode": 28, "score":  1},
-      {"text" :  "Persuadé qu'ils n'ont aucune chance de s'en être sortie, tu continue", "nextNode": 23, "score":  -4},
-      {"text" :  "Tu fais marche arrière pour les achever et être sûr qu'ils ne souffrent pas et continue de couper des arbres", "nextNode": 23, "score":  -2}
+    "text": "Le premier arbre que tu coupes habitait une famille d'écureuils qui tombent et passent sous tes roues",
+    "choices": [
+      { "text": "Tu descends de ton véhicule pour voir s'ils sont toujours en vie", "nextNode": 28, "score": 1 },
+      { "text": "Persuadé qu'ils n'ont aucune chance de s'en être sortis, tu continues", "nextNode": 23, "score": -4 },
+      { "text": "Tu fais marche arrière pour les achever et être sûr qu'ils ne souffrent pas et continues de couper des arbres", "nextNode": 23, "score": -2 }
     ]
   },
   {
     "id": 23,
-    "text" : "Après des dizaines d'arbres de coupé, et quelques familles d'écureils agonisant sur le sol, un mouvement dans les fougère t'interpelle",
-    "choices" : [
-      {"text" :  "Je roule dessus, c'est peut être une bête dangereuse.", "nextNode": 25, "score":  -4},
-      {"text" :  "Je change ma route pour éviter un potentiel danger et continue de couper les arbres", "nextNode": 24, "score":  -2},
-      {"text" :  "Je m'arrête pour aller voir ce que c'est", "nextNode": 26, "score":  0}
+    "text": "Après des dizaines d'arbres coupés, et quelques familles d'écureuils agonisant sur le sol, un mouvement dans les fougères t'interpelle",
+    "choices": [
+      { "text": "Je roule dessus, c'est peut-être une bête dangereuse.", "nextNode": 25, "score": -4 },
+      { "text": "Je change ma route pour éviter un potentiel danger et continues de couper les arbres", "nextNode": 24, "score": -2 },
+      { "text": "Je m'arrête pour aller voir ce que c'est", "nextNode": 26, "score": 0 }
     ]
   },
   {
     "id": 24,
-    "text" : "Vous avez rasé la forêt avec un compteur d'animaux tués et relocalisés ahurissant. Si c'était des êtres humains, cela aurait été qualifié de génocide et de crime contre l'humanité, mais ça n'a pas d'importance car ce sont des animaux.",
-    "choices" : []
+    "text": "Vous avez rasé la forêt avec un nombre d'animaux tués et relocalisés ahurissant. Si c'était des êtres humains, cela aurait été qualifié de génocide et de crime contre l'humanité, mais ça n'a pas d'importance car ce sont des animaux.",
+    "choices": []
   },
   {
     "id": 25,
-    "text" : "Tu entends un cri qui ne s'apparente pas à celui d'un humain mais d'un animal sauvage",
-    "choices" : [
-      {"text" :  "Descendre pour aller voir", "nextNode": 26, "score":  0},
-      {"text" :  "Continuer a couper les arbres", "nextNode": 24, "score":  -3}
+    "text": "Tu entends un cri qui ne s'apparente pas à celui d'un humain mais à celui d'un animal sauvage",
+    "choices": [
+      { "text": "Descendre pour aller voir", "nextNode": 26, "score": 0 },
+      { "text": "Continuer à couper les arbres", "nextNode": 24, "score": -3 }
     ]
   },
   {
     "id": 26,
-    "text" : "Une bête de la taille d'un hamster, orange avec une grosse moustache jaune surgis. Elle vous parle d'une voix furieuse: \"Je suis Rolax, esprit de la foret, je veux que tu partes de ma forêt sur le champ ou tu le regretteras !\"",
-    "choices" : [
-      {"text" :  "Repartir dans son engins pour couper les arbres", "nextNode": 27, "score":  -2},
-      {"text" :  "Se plier aux ordres et partir", "nextNode": 3, "score":  -3},
-      {"text" :  "Tuer la bête", "nextNode": 24, "score":  -3}
+    "text": "Une bête de la taille d'un hamster, orange avec une grosse moustache jaune surgit. Elle vous parle d'une voix furieuse : \"Je suis Rolax, esprit de la forêt, je veux que tu partes de ma forêt sur le champ ou tu le regretteras !\"",
+    "choices": [
+      { "text": "Repartir dans son engin pour couper les arbres", "nextNode": 27, "score": -2 },
+      { "text": "Se plier aux ordres et partir", "nextNode": 3, "score": -3 },
+      { "text": "Tuer la bête", "nextNode": 24, "score": -3 }
     ]
   },
   {
     "id": 27,
-    "text" : "La bête vous avait prévenu. Elle vous a tué, pour protéger sa forêt. Quelqu'un a repris votre travail est a coupé toute la forêt à votre place.",
-    "choices" : []
+    "text": "La bête vous avait prévenu. Elle vous a tué, pour protéger sa forêt. Quelqu'un a repris votre travail et a coupé toute la forêt à votre place.",
+    "choices": []
   },
   {
     "id": 28,
-    "text" : "Tu les vois souffrir et agoniser par terre, tu te sens extrêmement mal.",
-    "choices" : [
-      {"text" :  "Tu remontes dans ton véhicule et décide de faire marche arrière pour les achever et continuer a couper les arbres", "nextNode": 23, "score":  -6},
-      {"text" :  "Tu les prends avec toi dans l'espoir de trouver une solution pour les soigner", "nextNode": 29, "score":  -3},
-      {"text" :  "C'est peine perdu et tu remonte dans ton engin pour continuer la déforestation", "nextNode": 23, "score":  -2}
+    "text": "Tu les vois souffrir et agoniser par terre, tu te sens extrêmement mal.",
+    "choices": [
+      { "text": "Tu remontes dans ton véhicule et décides de faire marche arrière pour les achever et continuer à couper les arbres", "nextNode": 23, "score": -6 },
+      { "text": "Tu les prends avec toi dans l'espoir de trouver une solution pour les soigner", "nextNode": 29, "score": -3 },
+      { "text": "C'est peine perdue et tu remontes dans ton engin pour continuer la déforestation", "nextNode": 23, "score": -2 }
     ]
   },
   {
     "id": 29,
-    "text" : "L'animal n'a pas pu être sauvé. Comment réagir ?",
-    "choices" : [
-      {"text" :  "Contacter une ONG qui défend l'environnement par mail", "nextNode": 34, "score":  2},
-      {"text" :  "Contacter une ONG qui défend l'environnement en personne", "nextNode": 35, "score":  2},
-      {"text" :  "Pour te changer les idées tu décides de retourner explorer la forêt", "nextNode": 4, "score":  0},
-      {"text" :  "Continuer à couper les arbres", "nextNode": 23, "score":  -2}
+    "text": "L'animal n'a pas pu être sauvé. Comment réagir ?",
+    "choices": [
+      { "text": "Contacter une ONG qui défend l'environnement par mail", "nextNode": 34, "score": 2 },
+      { "text": "Contacter une ONG qui défend l'environnement en personne", "nextNode": 35, "score": 2 },
+      { "text": "Pour te changer les idées, tu décides de retourner explorer la forêt", "nextNode": 4, "score": 0 },
+      { "text": "Continuer à couper les arbres", "nextNode": 23, "score": -2 }
     ]
   },
   {
     "id": 30,
-    "text" : "Ton entreprise est énervé, et emploi un détective pout trouver l'auteur de ce sabotage.",
-    "choices" : [
-      {"text" :  "Te dénoncer et assumer les conséquences", "nextNode": 31, "score":  0},
-      {"text" :  "Accuser le pdg de l'entreprise pour le renverser", "nextNode": 32, "score":  2},
-      {"text" :  "Dire ne rien savoir, et paraître agacé pour ne pas sembler suspect", "nextNode": 33, "score":  1}
+    "text": "Ton entreprise est énervée et emploie un détective pour trouver l'auteur de ce sabotage.",
+    "choices": [
+      { "text": "Te dénoncer et assumer les conséquences", "nextNode": 31, "score": 0 },
+      { "text": "Accuser le PDG de l'entreprise pour le renverser", "nextNode": 32, "score": 2 },
+      { "text": "Dire ne rien savoir, et paraître agacé pour ne pas sembler suspect", "nextNode": 33, "score": 1 }
     ]
   },
   {
     "id": 31,
-    "text" : "Tu as décus tout le monde, humilié et hué, accusé d'éco-terrorisme, tu dois quitter ton entreprise.",
-    "choices" : [
-      {"text" :  "Voir la suite", "nextNode": 2, "score": -40}
+    "text": "Tu as déçu tout le monde, humilié et hué, accusé d'éco-terrorisme, tu dois quitter ton entreprise.",
+    "choices": [
+      { "text": "Voir la suite", "nextNode": 2, "score": -40 }
     ]
   },
   {
     "id": 32,
-    "text" : "Malheureusement, le pdg est beaucoup trop influent et toutes ces accusations reviennent contre toi. Tu es humilié et hué, accusé d'éco-terrorisme, tu dois quitter ton entreprise.",
-    "choices" : [
-      {"text" :  "Voir la suite", "nextNode": 2, "score": -40}
+    "text": "Malheureusement, le PDG est beaucoup trop influent et toutes ces accusations reviennent contre toi. Tu es humilié et hué, accusé d'éco-terrorisme, tu dois quitter ton entreprise.",
+    "choices": [
+      { "text": "Voir la suite", "nextNode": 2, "score": -40 }
     ]
   },
   {
     "id": 33,
-    "text" : "Personne ne se doute que vous ayez pu faire une telle chose. Une semaine après votre sabotage, le projet reprend.",
-    "choices" : [
-      {"text" :  "Assumer son travail et monter dans son véhicule", "nextNode": 22, "score": -2},
-      {"text" :  "Contacter une ONG par mail", "nextNode": 34, "score": 2},
-      {"text" :  "Contacter une ONG en personne", "nextNode": 35, "score": -2},
-      {"text" :  "Assumer son travail et visiter la foret à raser", "nextNode": 4, "score": 0}
+    "text": "Personne ne se doute que vous ayez pu faire une telle chose. Une semaine après votre sabotage, le projet reprend.",
+    "choices": [
+      { "text": "Assumer son travail et monter dans son véhicule", "nextNode": 22, "score": -2 },
+      { "text": "Contacter une ONG par mail", "nextNode": 34, "score": 2 },
+      { "text": "Contacter une ONG en personne", "nextNode": 35, "score": -2 },
+      { "text": "Assumer son travail et visiter la forêt à raser", "nextNode": 4, "score": 0 }
     ]
   },
   {
     "id": 34,
-    "text" : "Ton mail était sur écoute. Tu as déçu tout le monde, humilié et hué, accusé d'éco-terrorisme tu dois quitter ton entreprise",
-    "choices" : [
-      {"text" :  "Voir la suite", "nextNode": 2, "score": -40}
+    "text": "Ton mail était sur écoute. Tu as déçu tout le monde, humilié et hué, accusé d'éco-terrorisme, tu dois quitter ton entreprise",
+    "choices": [
+      { "text": "Voir la suite", "nextNode": 2, "score": -40 }
     ]
   },
   {
     "id": 35,
-    "text" : "L'ONG vous accueil les bras ouverts. Que voulez vous dire ?",
-    "choices" : [
-      {"text" :  "Leur parler d'une mission de sabotage de votre entreprise", "nextNode": 37, "score": 3},
-      {"text" :  "Leur parler de votre mission de raser la foret", "nextNode": 36, "score": 0},
-      {"text" :  "Leur parler de votre volonté de quitter l'entreprise", "nextNode": 36, "score": 1}
+    "text": "L'ONG vous accueille les bras ouverts. Que voulez-vous dire ?",
+    "choices": [
+      { "text": "Leur parler d'une mission de sabotage de votre entreprise", "nextNode": 37, "score": 3 },
+      { "text": "Leur parler de votre mission de raser la forêt", "nextNode": 36, "score": 0 },
+      { "text": "Leur parler de votre volonté de quitter l'entreprise", "nextNode": 36, "score": 1 }
     ]
   },
   {
     "id": 36,
-    "text" : "Il vous conseil de démissionner pour aller lutter pour l'écologie avec eux.",
-    "choices" : [
-      {"text" :  "Refuser de quitter votre travail et parler d'un projet de sabotage", "nextNode": 37, "score": 3},
-      {"text" :  "Quitter son travail et rejoindre l'ONG rebelle", "nextNode": 2, "score": 1}
+    "text": "Il vous conseille de démissionner pour aller lutter pour l'écologie avec eux.",
+    "choices": [
+      { "text": "Refuser de quitter votre travail et parler d'un projet de sabotage", "nextNode": 37, "score": 3 },
+      { "text": "Quitter son travail et rejoindre l'ONG rebelle", "nextNode": 2, "score": 1 }
     ]
   },
   {
     "id": 37,
-    "text" : "Ils sont surpris de votre rébellion, mais semblent intéressés par cette proposition",
-    "choices" : [
-      {"text" :  "Dire que c'était une blague", "nextNode": 38, "score": 3},
-      {"text" :  "Préparer l'assassinats contre les hauts dirigeants", "nextNode": 40, "score": 1},
-      {"text" :  "Préparer une mission de sabotage de la plupart des outils de travail", "nextNode": 41, "score": 1}
+    "text": "Ils sont surpris de votre rébellion, mais semblent intéressés par cette proposition",
+    "choices": [
+      { "text": "Dire que c'était une blague", "nextNode": 38, "score": 3 },
+      { "text": "Préparer l'assassinat contre les hauts dirigeants", "nextNode": 40, "score": 1 },
+      { "text": "Préparer une mission de sabotage de la plupart des outils de travail", "nextNode": 41, "score": 1 }
     ]
   },
   {
     "id": 38,
-    "text" : "Ils ont perdu confiance envers vous, ils vous demande de partir, de reprendre vos occupations ou de trouver une autre ONG",
-    "choices" : [
-      {"text" :  "Partir", "nextNode": 3, "score": -2},
-      {"text" :  "Refuser de partir pour se battre jusqu'au bout contre l'entreprise", "nextNode": 39, "score": -2}
+    "text": "Ils ont perdu confiance envers vous, ils vous demandent de partir, de reprendre vos occupations ou de trouver une autre ONG",
+    "choices": [
+      { "text": "Partir", "nextNode": 3, "score": -2 },
+      { "text": "Refuser de partir pour se battre jusqu'au bout contre l'entreprise", "nextNode": 39, "score": -2 }
     ]
   },
   {
     "id": 39,
-    "text" : "Ils contactent la police pour te faire partir",
-    "choices" : [
-      {"text" :  "Partir", "nextNode": 3, "score": -2}
+    "text": "Ils contactent la police pour te faire partir",
+    "choices": [
+      { "text": "Partir", "nextNode": 3, "score": -2 }
     ]
   },
   {
     "id": 40,
-    "text" : "Ils contactent la police et te dénonce, tuer n'est pas dans leurs valeurs. Quelqu'un d'autre à repris ton travail et a rasé la forêt, ce qui a détruit une famille d'écureuil et pleins d'autres animaux",
-    "choices" : []
+    "text": "Ils contactent la police et te dénoncent, tuer n'est pas dans leurs valeurs. Quelqu'un d'autre a repris ton travail et a rasé la forêt, ce qui a détruit une famille d'écureuils et plein d'autres animaux",
+    "choices": []
   },
   {
     "id": 41,
-    "text" : "Ils mettent alors en place un plan pour déjouer la sécurité de l'entreprise et accéder aux véhicules pour les saboter.\nL'objectif est de rendre le cout de réparation tellement exorbitant que l'entreprise devra fermer. \nTa mission, faire rentrer les membres de l'ONG rebelle",
-    "choices" : [
-      {"text" :  "Accepter la mission", "nextNode": 43, "score": 3},
-      {"text" :  "Refuser la mission", "nextNode": 42, "score": -3}
+    "text": "Ils mettent alors en place un plan pour déjouer la sécurité de l'entreprise et accéder aux véhicules pour les saboter.\nL'objectif est de rendre le coût de réparation tellement exorbitant que l'entreprise devra fermer.\nTa mission est de faire rentrer les membres de l'ONG rebelle",
+    "choices": [
+      { "text": "Accepter la mission", "nextNode": 43, "score": 3 },
+      { "text": "Refuser la mission", "nextNode": 42, "score": -3 }
     ]
   },
   {
     "id": 42,
-    "text" : "Tu as été tué par un membre de l'ONG car tu connaissais beaucoup trop d'informations sur les ambitions de l'ONG. Quelqu'un d'autre à repris ton travail et a rasé la forêt, ce qui a détruit une famille d'écureuil et pleins d'autre animaux",
-    "choices" : []
+    "text": "Tu as été tué par un membre de l'ONG car tu connaissais beaucoup trop d'informations sur les ambitions de l'ONG. Quelqu'un d'autre a repris ton travail et a rasé la forêt, ce qui a détruit une famille d'écureuils et plein d'autres animaux",
+    "choices": []
   },
   {
     "id": 43,
-    "text" : "Il faut maintenant faire rentrer les membres de l'ONG pour saboter les véhicules",
-    "choices" : [
-      {"text" :  "Les faire rentrer comme des visiteurs excetionnels", "nextNode": 44, "score": 4},
-      {"text" :  "Les faire rentrer en les cachant dans le coffre de votre voiture", "nextNode": 45, "score": 10}
+    "text": "Il faut maintenant faire rentrer les membres de l'ONG pour saboter les véhicules",
+    "choices": [
+      { "text": "Les faire rentrer comme des visiteurs exceptionnels", "nextNode": 44, "score": 4 },
+      { "text": "Les faire rentrer en les cachant dans le coffre de votre voiture", "nextNode": 45, "score": 10 }
     ]
   },
   {
     "id": 44,
-    "text" : "Le sabotage à réussi mais les caméras de surveillance ont repéré un groupe d'individu suspect appartenant à une ONG écologique dangereuse. Vous êtes tous arrêtés et emprisonnés. Quelqu'un d'autre à repris ton travail et a rasé la forêt, ce qui a détruit une famille d'écureuil et pleins d'autre animaux",
-    "choices" : []
+    "text": "Le sabotage a réussi, mais les caméras de surveillance ont repéré un groupe d'individus suspects appartenant à une ONG écologique dangereuse. Vous êtes tous arrêtés et emprisonnés. Quelqu'un d'autre a repris ton travail et a rasé la forêt, ce qui a détruit une famille d'écureuils et plein d'autres animaux",
+    "choices": []
   },
   {
     "id": 45,
-    "text" : "Le sabotage à réussi, le coffre de la voiture à permis au groupe de ne pas être repéré par les caméra de surveillance. L'entreprise à décidé d'arrêter cette déforestation par manque d'argent. Vous avez sauvé la forêt.",
-    "choices" : []
+    "text": "Le sabotage a réussi, le coffre de la voiture a permis au groupe de ne pas être repéré par les caméras de surveillance. L'entreprise a décidé d'arrêter cette déforestation par manque d'argent. Vous avez sauvé la forêt.",
+    "choices": []
   }
 ]
