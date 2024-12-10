@@ -1,7 +1,6 @@
 package com.example.arbrenarratif.ui.main;
 
 import android.content.Intent;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.arbrenarratif.R;
@@ -84,26 +84,21 @@ public class MainActivity extends AppCompatActivity {
             button.setPadding(16, 16, 16, 16); // Padding
             button.setAllCaps(false);
             button.setTextSize(20f);
-            button.setBackgroundColor(getResources().getColor(R.color.hunterGreen)); // Couleur de fond
-            button.setTextColor(getResources().getColor(R.color.ecru));
 
-            // Ajouter un border radius de 5px
-            GradientDrawable drawable = new GradientDrawable();
-            drawable.setCornerRadius(20f); // Rayon des coins arrondis (en pixels)
-            drawable.setColor(getResources().getColor(R.color.hunterGreen)); // La couleur de fond du bouton
-            button.setBackground(drawable);
+            // Appliquer les sélecteurs de fond et de texte
+            button.setBackgroundResource(R.drawable.button_background_selector); // Sélecteur de fond
+            button.setTextColor(ContextCompat.getColorStateList(this, R.color.button_text_color_selector)); // Sélecteur de couleur du texte
 
             // Définir l'OnClickListener avec animation de pulse
             button.setOnClickListener(v -> {
-                animatePagePulseAndProceed(choice);
+                animateButtonClick(v, choice);
             });
 
             choicesLayout.addView(button);
         }
-
     }
 
-    private void animatePagePulseAndProceed(Choice choice) {
+    private void animateButtonClick(View view, Choice choice) {
         // Désactiver tous les boutons pendant l'animation
         setChoicesEnabled(false);
 
