@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">arbreNarratif</string>
+    <string name="app_name">EcoQuest</string>
     <string name="end_message">Merci d\'avoir joué !</string>
     <string name="restart_button">Recommencer l\'histoire</string>
     <string name="make_a_choice">Faites votre choix</string>
     <string name="score_image">Score image</string>
+    <string name="app_description">Bienvenue dans votre aventure écoresponsable ! Prenez des décisions pour protéger l\'environnement. Chaque choix influence votre score écologique. Bonne chance !</string>
+    <string name="app_logo_desc">Logo de l\'application</string>
+    <string name="start_button">Commencer l\'aventure</string>
 </resources>
