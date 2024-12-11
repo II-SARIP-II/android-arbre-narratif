@@ -4,8 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkGreen"
     tools:context=".ui.splash.SplashActivity">
+
+    <!-- Background Image with Overlay -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background_image_description"
+        android:src="@drawable/splash_background"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.5" />
 
     <!-- Header section with logo and title -->
     <LinearLayout
@@ -22,22 +37,11 @@
         <!-- Logo of the application -->
         <ImageView
             android:id="@+id/appLogo"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@mipmap/ic_launcher"
-            android:contentDescription="@string/app_logo_desc" />
+            android:layout_width="223dp"
+            android:layout_height="201dp"
+            android:contentDescription="@string/app_logo_desc"
+            android:src="@mipmap/ic_launcher_white" />
 
-        <!-- Application name -->
-        <TextView
-            android:id="@+id/appName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/app_name"
-            android:textColor="@color/babyPowder"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/font_eco" />
     </LinearLayout>
 
     <!-- Description or rules of the game -->
