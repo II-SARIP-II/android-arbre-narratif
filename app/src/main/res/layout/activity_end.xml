@@ -1,71 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/rootEndLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/babyPowder"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Image Dynamique Basée sur le Score -->
+    <!-- Background Image Fullscreen -->
     <ImageView
-        android:id="@+id/scoreImageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:contentDescription="@string/score_image"
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/background_image_description"
         android:src="@drawable/img_high_score"
+        android:scaleType="centerCrop" />
+
+    <!-- Overlay for readability -->
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.6" />
+
+    <!-- Header with Conclusion Text -->
+    <TextView
+        android:id="@+id/endTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/font_eco"
+        android:gravity="center"
+        android:text="Fin de l'histoire !"
+        android:textColor="@color/babyPowder"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Texte de Conclusion -->
+    <!-- Score Text -->
     <TextView
-        android:id="@+id/endTextView"
+        android:id="@+id/scoreTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/font_eco"
         android:gravity="center"
-        android:text="Fin de l'histoire !"
-        android:textColor="@color/hunterGreen"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scoreImageView" />
-
-    <!-- Texte du Score Éco -->
-    <TextView
-        android:id="@+id/scoreTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/font_eco"
-        android:gravity="center"
         android:text="Score Éco : 10"
-        android:textColor="@color/darkGreen"
+        android:textColor="@color/babyPowder"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/endTextView" />
 
-    <!-- Barre de Progression Éco -->
+    <!-- Progress Bar -->
+
+
     <ProgressBar
         android:id="@+id/ecoProgressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="0dp"
-        android:layout_height="10dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/fieldDrab"
-        android:max="20"
-        android:progress="75"
-        android:progressTint="@color/hunterGreen"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="112dp"
+        android:background="@color/gray"
+        android:max="40"
+        android:progress="20"
+        android:progressDrawable="@drawable/progress_bar_styled"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/scoreTextView" />
 
-    <!-- Texte d'Appréciation -->
     <TextView
         android:id="@+id/appreciationTextView"
         android:layout_width="0dp"
@@ -74,35 +81,34 @@
         android:fontFamily="@font/font_eco"
         android:gravity="center"
         android:text="Tu as été très écoresponsable !"
-        android:textColor="@color/darkGreen"
+        android:textColor="@color/babyPowder"
         android:textSize="18sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ecoProgressBar" />
 
-    <!-- Bouton de Recommencement -->
     <Button
         android:id="@+id/restartButton"
-        android:layout_width="0dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/button_background_selector"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="@color/hunterGreen"
         android:fontFamily="@font/font_eco"
         android:text="@string/restart_button"
         android:textColor="@color/button_text_color_selector"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appreciationTextView" />
 
-    <!-- Bouton pour Voir les Détails du Score -->
     <Button
         android:id="@+id/detailsButton"
-        android:layout_width="0dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button_background_selector"
+        android:backgroundTint="@color/hunterGreen"
         android:fontFamily="@font/font_eco"
         android:text="Voir les détails"
         android:textColor="@color/button_text_color_selector"

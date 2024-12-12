@@ -1,5 +1,6 @@
 package com.example.arbrenarratif.ui.end;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import com.example.arbrenarratif.R;
 import com.example.arbrenarratif.ui.main.MainActivity;
 
 public class EndActivity extends AppCompatActivity {
+
     private TextView endTextView;
     private TextView scoreTextView;
     private TextView appreciationTextView;
@@ -22,6 +24,7 @@ public class EndActivity extends AppCompatActivity {
     private Button restartButton;
     private Button detailsButton;
 
+    @SuppressLint("UseCompatLoadingForColorStateLists")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +34,7 @@ public class EndActivity extends AppCompatActivity {
         endTextView = findViewById(R.id.endTextView);
         scoreTextView = findViewById(R.id.scoreTextView);
         appreciationTextView = findViewById(R.id.appreciationTextView);
-        scoreImageView = findViewById(R.id.scoreImageView);
+        scoreImageView = findViewById(R.id.backgroundImage);
         ecoProgressBar = findViewById(R.id.ecoProgressBar);
         restartButton = findViewById(R.id.restartButton);
         detailsButton = findViewById(R.id.detailsButton);
@@ -44,13 +47,24 @@ public class EndActivity extends AppCompatActivity {
         endTextView.setText(finalNodeText);
 
         // Afficher le score
-        scoreTextView.setText("Score Éco : " + finalScore);
+        scoreTextView.setText(getString(R.string.score_text, finalScore));
 
         // Configurer la ProgressBar
-        ecoProgressBar.setMax(20); // Ajustez selon votre système de score
-        ecoProgressBar.setProgress(finalScore);
+        int maxScore = 20;
+        int minScore = -20;
 
-        // Définir l'image basée sur le score
+        int normalizedScore = finalScore - minScore; // Par exemple : -20 à +20 devient 0 à 40
+        ecoProgressBar.setMax(maxScore - minScore); // Définit la plage totale (40 dans cet exemple)
+        ecoProgressBar.setProgress(normalizedScore);
+
+        if (finalScore > 0) {
+            ecoProgressBar.setProgressTintList(getResources().getColorStateList(R.color.hunterGreen));
+        } else if (finalScore < 0) {
+            ecoProgressBar.setProgressTintList(getResources().getColorStateList(R.color.red));
+        } else {
+            ecoProgressBar.setProgressTintList(getResources().getColorStateList(R.color.gray));
+        }
+
         if (finalScore >= 15) {
             scoreImageView.setImageResource(R.drawable.img_high_score);
         } else if (finalScore >= 5) {
@@ -59,15 +73,9 @@ public class EndActivity extends AppCompatActivity {
             scoreImageView.setImageResource(R.drawable.img_low_score);
         }
 
+
         // Définir le texte d'appréciation basé sur le score
-        String appreciation;
-        if (finalScore >= 15) {
-            appreciation = "Tu as été extrêmement écoresponsable !";
-        } else if (finalScore >= 5) {
-            appreciation = "Tu as fait quelques efforts écoresponsables.";
-        } else {
-            appreciation = "Tes choix ont été assez nocifs pour l’environnement...";
-        }
+        String appreciation = getAppreciationText(finalScore);
         appreciationTextView.setText(appreciation);
 
         // Configurer le bouton de recommencement
@@ -75,14 +83,27 @@ public class EndActivity extends AppCompatActivity {
             Intent intent = new Intent(EndActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-            // Optionnel : ajouter une animation de transition
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // Animation optionnelle
         });
 
         // Configurer le bouton des détails
-        detailsButton.setOnClickListener(v -> {
-            showDetailsDialog(finalScore);
-        });
+        detailsButton.setOnClickListener(v -> showDetailsDialog(finalScore));
+    }
+
+    /**
+     * Renvoie un texte d'appréciation basé sur le score.
+     *
+     * @param finalScore Le score final de l'utilisateur.
+     * @return Texte d'appréciation.
+     */
+    private String getAppreciationText(int finalScore) {
+        if (finalScore >= 15) {
+            return "Tu as été extrêmement écoresponsable !";
+        } else if (finalScore >= 5) {
+            return "Tu as fait quelques efforts écoresponsables.";
+        } else {
+            return "Tes choix ont été assez nocifs pour l’environnement...";
+        }
     }
 
     /**
@@ -91,7 +112,6 @@ public class EndActivity extends AppCompatActivity {
      * @param finalScore Le score final de l'utilisateur.
      */
     private void showDetailsDialog(int finalScore) {
-        // Construire le message basé sur le score
         String details;
         if (finalScore >= 15) {
             details = "Excellent! Tu as fait tous les choix possibles pour protéger l'environnement.\n\nVoici comment tu peux continuer à agir :";
@@ -110,12 +130,10 @@ public class EndActivity extends AppCompatActivity {
             details += "\n• Participe à des actions de nettoyage ou de reboisement.";
         }
 
-        // Créer et afficher la boîte de dialogue
         new AlertDialog.Builder(this)
                 .setTitle("Détails du Score Éco")
                 .setMessage(details)
                 .setPositiveButton("OK", null)
                 .show();
     }
-
 }
