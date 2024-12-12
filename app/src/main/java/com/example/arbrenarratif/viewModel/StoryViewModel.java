@@ -59,4 +59,8 @@ public class StoryViewModel extends ViewModel {
     public String getLastNodeText() {
         return (lastNode != null) ? lastNode.getText() : "";
     }
+
+    public int getLastNodeId() {
+        return (lastNode != null) ? lastNode.getId() : 0;
+    }
 }

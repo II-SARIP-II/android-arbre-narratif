@@ -42,6 +42,7 @@ public class EndActivity extends AppCompatActivity {
         // Récupérer les données passées via Intent
         String finalNodeText = getIntent().getStringExtra("finalNodeText");
         int finalScore = getIntent().getIntExtra("finalScore", 0);
+        int finalNodeId = getIntent().getIntExtra("finalNodeId", 0);
 
         // Afficher le texte de fin
         endTextView.setText(finalNodeText);
@@ -53,8 +54,8 @@ public class EndActivity extends AppCompatActivity {
         int maxScore = 20;
         int minScore = -20;
 
-        int normalizedScore = finalScore - minScore; // Par exemple : -20 à +20 devient 0 à 40
-        ecoProgressBar.setMax(maxScore - minScore); // Définit la plage totale (40 dans cet exemple)
+        int normalizedScore = finalScore - minScore;
+        ecoProgressBar.setMax(maxScore - minScore);
         ecoProgressBar.setProgress(normalizedScore);
 
         if (finalScore > 0) {
@@ -65,14 +66,14 @@ public class EndActivity extends AppCompatActivity {
             ecoProgressBar.setProgressTintList(getResources().getColorStateList(R.color.gray));
         }
 
-        if (finalScore >= 15) {
-            scoreImageView.setImageResource(R.drawable.img_high_score);
-        } else if (finalScore >= 5) {
-            scoreImageView.setImageResource(R.drawable.img_medium_score);
+        String imageName = "node_" + finalNodeId;
+        int imageResId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+        if (imageResId != 0) {
+            scoreImageView.setImageResource(imageResId);
         } else {
-            scoreImageView.setImageResource(R.drawable.img_low_score);
+            // Image par défaut si aucune correspondance
+            scoreImageView.setImageResource(R.drawable.splash_background);
         }
-
 
         // Définir le texte d'appréciation basé sur le score
         String appreciation = getAppreciationText(finalScore);
@@ -83,7 +84,7 @@ public class EndActivity extends AppCompatActivity {
             Intent intent = new Intent(EndActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-            overridePendingTransition(R.anim.fade_in, R.anim.fade_out); // Animation optionnelle
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
 
         // Configurer le bouton des détails

@@ -60,9 +60,11 @@ public class MainActivity extends AppCompatActivity {
                 String finalText = viewModel.getLastNodeText();
                 int finalScore = viewModel.getEcoScore().getValue() != null ? viewModel.getEcoScore().getValue() : 0;
 
+                // Transition vers l'EndActivity avec les extras nécessaires
                 Intent intent = new Intent(MainActivity.this, EndActivity.class);
                 intent.putExtra("finalNodeText", finalText);
                 intent.putExtra("finalScore", finalScore);
+                intent.putExtra("finalNodeId", viewModel.getLastNodeId()); // Assurez-vous que cette valeur est correcte
                 startActivity(intent);
                 finish();
             }

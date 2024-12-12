@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/background_image_description"
-        android:src="@drawable/img_high_score"
         android:scaleType="centerCrop" />
 
     <!-- Overlay for readability -->
@@ -56,8 +55,6 @@
         app:layout_constraintTop_toBottomOf="@id/endTextView" />
 
     <!-- Progress Bar -->
-
-
     <ProgressBar
         android:id="@+id/ecoProgressBar"
         style="?android:attr/progressBarStyleHorizontal"
