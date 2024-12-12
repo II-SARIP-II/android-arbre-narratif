@@ -28,7 +28,7 @@
         android:id="@+id/endTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/font_eco"
         android:gravity="center"
         android:text="Fin de l'histoire !"

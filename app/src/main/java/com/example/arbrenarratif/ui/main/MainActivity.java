@@ -8,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout choicesLayout;
     private Animation pulseAnimation;
     private ProgressBar scoreGauge;
+    private ImageView backgroundImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Références aux vues
+        backgroundImageView = findViewById(R.id.backgroundImageView);
         storyTextView = findViewById(R.id.storyTextView);
         choicesLayout = findViewById(R.id.choicesLayout);
         scoreGauge = findViewById(R.id.scoreGauge);
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         viewModel.getCurrentNode().observe(this, storyNode -> {
             if (storyNode != null) {
                 updateStoryNode(storyNode);
+                updateBackgroundImage(storyNode.getId());
             } else {
                 String finalText = viewModel.getLastNodeText();
                 int finalScore = viewModel.getEcoScore().getValue() != null ? viewModel.getEcoScore().getValue() : 0;
@@ -72,11 +76,6 @@ public class MainActivity extends AppCompatActivity {
         viewModel.startStory(this);
     }
 
-    /**
-     * Met à jour le contenu de l'histoire et les choix.
-     *
-     * @param node Le nœud actuel de l'histoire.
-     */
     private void updateStoryNode(StoryNode node) {
         storyTextView.setText(node.getText());
         choicesLayout.removeAllViews();
@@ -85,22 +84,19 @@ public class MainActivity extends AppCompatActivity {
             Button button = new Button(this);
             button.setText(choice.getText());
 
-            // Crée des LayoutParams avec des marges
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT);
-            layoutParams.setMargins(16, 16, 16, 16); // Marges en pixels (gauche, haut, droite, bas)
+            layoutParams.setMargins(16, 16, 16, 16);
             button.setLayoutParams(layoutParams);
 
-            button.setPadding(16, 16, 16, 16); // Padding
+            button.setPadding(16, 16, 16, 16);
             button.setAllCaps(false);
             button.setTextSize(20f);
 
-            // Appliquer les sélecteurs de fond et de texte
-            button.setBackgroundResource(R.drawable.button_background_selector); // Sélecteur de fond
-            button.setTextColor(ContextCompat.getColorStateList(this, R.color.button_text_color_selector)); // Sélecteur de couleur du texte
+            button.setBackgroundResource(R.drawable.button_background_selector);
+            button.setTextColor(ContextCompat.getColorStateList(this, R.color.button_text_color_selector));
 
-            // Définir l'OnClickListener avec animation de pulse
             button.setOnClickListener(v -> {
                 animateButtonClick(v, choice);
             });
@@ -109,33 +105,30 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Met à jour la jauge en fonction du score.
-     *
-     * @param score Le score éco actuel.
-     */
+    private void updateBackgroundImage(int nodeId) {
+        String imageName = "node_" + nodeId;
+        int resId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+        if (resId != 0) {
+            backgroundImageView.setImageResource(resId);
+        } else {
+            backgroundImageView.setImageResource(R.drawable.splash_background);
+        }
+    }
+
     private void updateGauge(int score) {
         int maxScore = 20;
         int minScore = -20;
 
-        // Limiter le score entre minScore et maxScore
         if (score > maxScore) score = maxScore;
         if (score < minScore) score = minScore;
 
-        // Mapper le score de [-20, 20] à [0, 40]
-        int mappedProgress = score + 20; // -20 -> 0, 0 -> 20, +20 -> 40
+        int mappedProgress = score + 20;
 
-        // Animation fluide pour la progression
         ObjectAnimator progressAnimator = ObjectAnimator.ofInt(scoreGauge, "progress", scoreGauge.getProgress(), mappedProgress);
         progressAnimator.setDuration(800);
         progressAnimator.setInterpolator(new DecelerateInterpolator());
         progressAnimator.start();
 
-        // Animer la couleur uniquement sur la progression
-        animateColorChange(score);
-    }
-
-    private void animateColorChange(int score) {
         if (score < 0) {
             scoreGauge.setProgressTintList(ContextCompat.getColorStateList(this, R.color.red));
         } else if (score > 0) {
@@ -145,47 +138,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
-     * Gère l'animation de clic sur un bouton de choix et navigue vers le prochain nœud.
-     *
-     * @param view   La vue cliquée.
-     * @param choice Le choix sélectionné.
-     */
     private void animateButtonClick(View view, Choice choice) {
-        // Désactiver tous les boutons pendant l'animation
         setChoicesEnabled(false);
 
-        // Appliquer l'animation de pulse sur le rootLayout
         choicesLayout.startAnimation(pulseAnimation);
 
-        // Définir un listener pour détecter la fin de l'animation
         pulseAnimation.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-                // Rien à faire ici
-            }
+            public void onAnimationStart(Animation animation) {}
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                // Réinitialiser l'animation
                 choicesLayout.clearAnimation();
-
-                // Passer au choix sélectionné
                 viewModel.selectChoice(choice);
             }
 
             @Override
-            public void onAnimationRepeat(Animation animation) {
-                // Rien à faire ici
-            }
+            public void onAnimationRepeat(Animation animation) {}
         });
     }
 
-    /**
-     * Active ou désactive tous les boutons de choix.
-     *
-     * @param enabled Vrai pour activer, faux pour désactiver.
-     */
     private void setChoicesEnabled(boolean enabled) {
         int childCount = choicesLayout.getChildCount();
         for (int i = 0; i < childCount; i++) {
