@@ -10,4 +10,5 @@
     <string name="background_image_description">background image</string>
     <string name="score_text">Score Éco : %1$d</string>
     <string name="background_image_desc">description</string>
+    <string name="swipe_to_start">Swipe to start</string>
 </resources>

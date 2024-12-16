@@ -27,7 +27,7 @@ public class SplashActivity extends AppCompatActivity {
         draggableView = findViewById(R.id.draggable_view);
 
         draggableView.setOnTouchListener(new TouchListener());
-        draggableView.setClickable(true); // Ensure ACTION_MOVE is called
+        draggableView.setClickable(true);
 
         // Calculer la largeur maximale pour le déplacement
         sliderContainer.post(() -> {

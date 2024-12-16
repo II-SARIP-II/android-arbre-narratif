@@ -103,7 +103,7 @@ public class EndActivity extends AppCompatActivity {
         } else if (finalScore >= 5) {
             return "Tu as fait quelques efforts écoresponsables.";
         } else {
-            return "Tes choix ont été assez nocifs pour l’environnement...";
+            return "Tes choix ont été castastrophiques pour l'environnement...";
         }
     }
 
