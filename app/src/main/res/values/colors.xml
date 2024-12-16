@@ -11,4 +11,7 @@
     <color name="red">#D35E5E</color>
     <color name="green">#69A069</color>
     <color name="gray">#FFCCCCCC</color>
+
+    <!-- Blanc semi transparent -->
+    <color name="whiteAlpha">#80FFFFFF</color>"
 </resources>

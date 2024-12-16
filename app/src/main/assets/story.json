@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "text": "Antonin, tu travailles pour une grande entreprise polluante. On te confie un projet de déforestation pour installer une usine dans une forêt, avec un délai de six mois. Tu seras à bord d'un DOOSAN, un véhicule spécialisé dans la déforestation. Ce projet aurait un impact écologique majeur, mais assurerait ta promotion.",
+    "text": "Tu travailles pour une grande entreprise polluante. On te confie un projet de déforestation pour installer une usine dans une forêt, avec un délai de six mois. Tu seras à bord d'un DOOSAN, un véhicule spécialisé dans la déforestation. Ce projet aurait un impact écologique majeur, mais assurerait ta promotion.",
     "choices": [
       { "text": "Tu refuses et démissionnes sur le champ", "nextNode": 2, "score": -40 },
       { "text": "Tu acceptes le travail", "nextNode": 3, "score": 0 }
@@ -339,8 +339,8 @@
     "id": 43,
     "text": "Il faut maintenant faire rentrer les membres de l'ONG pour saboter les véhicules",
     "choices": [
-      { "text": "Les faire rentrer comme des visiteurs exceptionnels", "nextNode": 44, "score": 4 },
-      { "text": "Les faire rentrer en les cachant dans le coffre de votre voiture", "nextNode": 45, "score": 10 }
+      { "text": "Les faire rentrer comme des visiteurs exceptionnels", "nextNode": 44, "score": 10 },
+      { "text": "Les faire rentrer en les cachant dans le coffre de votre voiture", "nextNode": 45, "score": 20 }
     ]
   },
   {
